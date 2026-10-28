@@ -1,0 +1,71 @@
+header div{
+    display: flex;
+    align-items:center;
+    
+}
+.navbar-toggler{
+    border:1px solid white;
+}
+
+.navbar-toggler-icon{
+    filter: invert(1);
+}
+
+#lista a{
+    color:white;
+}
+#lista a:hover{
+    color: red;
+}
+#formatarSec{
+    border: solid black 2px;
+    
+    margin: 0;
+    padding: 0;
+}
+#formatarSec p{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#formatarSecP{
+    display: flex;
+   justify-content:center;
+   align-items: center;
+   min-height: 200px;
+   text-align: center;  
+    
+}
+
+#formatarSec h3{
+    
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin:0;
+   
+
+}
+.fotoCentro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: solid red 2px;
+}
+
+.backGroudLista{
+    background-color: black;
+}
+.ajusteB{
+    width: 300px;
+}
+
+
+footer{
+    height: 200px;
+    background-color: silver;
+    text-align: center;
+    align-items: center;
+    
+}
