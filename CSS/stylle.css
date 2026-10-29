@@ -3,6 +3,19 @@ header div{
     align-items:center;
     
 }
+
+body{
+ 
+ margin: 0 auto ;
+}
+
+.ajusteC{
+   color:white;
+   background-color: black;
+   text-align: center;
+   
+  
+}
 .navbar-toggler{
     border:1px solid white;
 }
@@ -51,18 +64,36 @@ header div{
     justify-content: center;
     align-items: center;
     height: 200px;
-    border: solid red 2px;
+    
 }
 
 .backGroudLista{
     background-color: black;
 }
 .ajusteB{
-    width: 300px;
+    width: 100%;
+    max-width: 400px;
 }
 
 
+.ajusteIcones{
+    text-align: center;
+    align-items: center;
+}
+
+.bi{
+    
+    font-size:30px;
+    color:black;
+    
+}
+.bi:hover{
+    color:red;
+    cursor: pointer;
+}
+
 footer{
+    
     height: 200px;
     background-color: silver;
     text-align: center;
