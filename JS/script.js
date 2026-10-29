@@ -1,10 +1,12 @@
 const cursos = [
-    { codigo: "WDD 130" },
-    { codigo: "WDD 131" },
-    { codigo: "WDD 231" },
-    { codigo: "CSE 110" },
-    { codigo: "CSE 111" },
-    { codigo: "CSE 210" }
+    { codigo: "WDD 130", creditos: 3 },
+    { codigo: "WDD 131", creditos: 3 },
+    { codigo: "WDD 231", creditos: 3 },
+
+
+    { codigo: "CSE 110", creditos: 2 },
+    { codigo: "CSE 111", creditos: 2 },
+    { codigo: "CSE 210", creditos: 2 }
 ];
 
 function filtrarCursos(tipo) {
@@ -41,11 +43,17 @@ function filtrarCursos(tipo) {
         coluna.append(botao);
         listaCursos.append(coluna);
 
-        totalCreditos += 1;
-    });
+          totalCreditos = cursosFiltrados.reduce((total, curso) => total + curso.creditos, 0);
+        });
 
     document.getElementById("totalCursos").textContent =
         "O total de créditos para os cursos listados acima é " + totalCreditos;
     document.getElementById("totalCursos").style.color="red"; 
 }
+
+
+document.getElementById("anoAtual").textContent = `© ${new Date().getFullYear()} Luiz Alex Umbelino -Idaho, EUA`;
+
+document.getElementById("ultimaModificacao").textContent =
+    `Última modificação: ${document.lastModified}`;
 

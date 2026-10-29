@@ -3,11 +3,26 @@ header div{
     align-items:center;
     
 }
-
-body{
- 
- margin: 0 auto ;
+header span {
+    font-size: 2rem;
+    font-weight: bold;
 }
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 
 .ajusteC{
    color:white;
@@ -50,7 +65,7 @@ body{
     
 }
 
-#formatarSec h3{
+#formatarSec h2{
     
     color: white;
     background-color: black;
@@ -96,7 +111,10 @@ footer{
     
     height: 200px;
     background-color: silver;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    color: black;
     
 }
