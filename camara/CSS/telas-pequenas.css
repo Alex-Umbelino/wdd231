@@ -20,14 +20,15 @@ main {
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-ul li {
-    float: none;
 }
 
 ul li a {
@@ -40,7 +41,7 @@ ul li a {
 }
 
 li a:hover {
-    color: blue;
+    color: #b3d9ff;
 }
 
 .identidade {
@@ -58,6 +59,10 @@ li a:hover {
     display: block;
     font-size: 25px;
     cursor: pointer;
+}
+
+nav {
+    width: 100%;
 }
 
 nav ul {
@@ -96,10 +101,11 @@ body.dark nav ul a {
 }
 
 body.dark nav ul li a:hover {
-    color: blue;
+    color: #b3d9ff;
 }
 
 #imgSP {
+    max-width: 100%;
     width: 100%;
     height: auto;
     max-height: 300px;
@@ -112,6 +118,7 @@ body.dark nav ul li a:hover {
     flex-direction: column;
     gap: 15px;
     position: relative;
+    min-width: 0;
 }
 
 .container button {
@@ -139,24 +146,39 @@ body.dark nav ul li a:hover {
     color: white;
 }
 
-.eventos, .clima {
+.eventos,
+.clima {
     width: 100%;
     min-width: 0;
     box-sizing: border-box;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
 }
 
 .eventos img {
     max-width: 100%;
+    width: auto;
     height: auto;
+    max-height: 180px;
+    object-fit: contain;
     display: block;
+    margin: 0 auto;
+    border-radius: 6px;
 }
 
-.eventos h2, .clima h2 {
-    margin: 0;
+.eventos h2,
+.clima h2 {
+    margin: 0 0 15px;
     padding: 7px;
     background-color: #222;
     color: white;
     border-radius: 8px;
+    text-align: center;
 }
 
 .informarOClima {
@@ -221,7 +243,7 @@ body.dark nav ul li a:hover {
 
 .empresas > p {
     text-align: center;
-    color: #777;
+    color: #333;
     font-size: 13px;
     padding: 0;
     margin: 5px 0 15px;
@@ -239,6 +261,8 @@ body.dark nav ul li a:hover {
 .empresas .dadosEmpresa img {
     flex: 0 0 65px;
     width: 65px;
+    min-width: 65px;
+    max-width: 65px;
     height: 65px;
     object-fit: contain;
 }
@@ -258,7 +282,7 @@ body.dark nav ul li a:hover {
     margin: 0;
     padding: 0;
     font-size: 13px;
-    color: #555;
+    color: #333;
     overflow-wrap: anywhere;
 }
 
@@ -269,31 +293,6 @@ body.dark nav ul li a:hover {
 
 .empresas .textosEmpresa a:hover {
     text-decoration: underline;
-}
-
-.empresas[id^="empresa"] > div:last-child {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding-top: 12px;
-}
-
-.empresas[id^="empresa"] img {
-    flex: 0 0 65px;
-    width: 65px;
-    height: 65px;
-    max-width: 65px;
-    object-fit: contain;
-}
-
-.empresas[id^="empresa"] > div:last-child p {
-    flex: 1 1 100%;
-    min-width: 0;
-    margin: 5px 0;
-    font-size: 13px;
-    overflow-wrap: anywhere;
 }
 
 .cabecalhoDiretorio {
@@ -314,7 +313,7 @@ body.dark nav ul li a:hover {
 .cabecalhoDiretorio p {
     margin: 0;
     font-size: 14px;
-    color: #666;
+    color: #333;
 }
 
 .container.modoGrid {
@@ -326,6 +325,7 @@ body.dark nav ul li a:hover {
 
 .container.modoLista {
     display: block;
+    max-width: 100%;
     overflow-x: auto;
     margin-bottom: 25px;
 }
@@ -432,7 +432,7 @@ footer {
 
 .sociais i {
     font-size: 25px;
-    color: red;
+    color: white;
 }
 
 #ajusteRodape {

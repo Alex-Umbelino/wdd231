@@ -174,7 +174,7 @@ async function empresas() {
             nome.textContent = listaEmpresas[i].nomeEmpresa;
             descricao.textContent = listaEmpresas[i].descricao;
 
-            imagem.src = listaEmpresas[i].imagem;
+            imagem.src = "camara/" + listaEmpresas[i].imagem;
             imagem.alt = listaEmpresas[i].nomeEmpresa;
 
             paragrafos[0].innerHTML = "<strong>Endereço:</strong> " + listaEmpresas[i].endereco;

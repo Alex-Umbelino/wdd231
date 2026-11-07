@@ -10,7 +10,7 @@
             "endereco": "Rua George Ohm, 206 - Torre A - Cidade Monções, São Paulo - SP, CEP 04576-020",
             "telefone": "+1 (800) 421-5048",
             "urlSite": "https://www.nvidia.com/pt-br/",
-            "imagem": "/wdd231/camara/IMG/nvidia.jpg",
+            "imagem": "IMG/nvidia.jpg",
             "nivelAssociacao":"Gold"
         },
         {
@@ -19,7 +19,7 @@
             "endereco": "Av. Brigadeiro Faria Lima, 3477 - Vila Olímpia, São Paulo - SP, CEP 04538-132",
             "telefone": null,
             "urlSite": "https://www.google.com",
-            "imagem": "/wdd231/camara/IMG/google.jpg",
+            "imagem": "IMG/google.jpg",
             "nivelAssociacao": "Gold"
         },
         {
@@ -28,7 +28,7 @@
             "endereco": "Av. Presidente Juscelino Kubitschek, 1909 - Torre Sul, 16º andar, São Paulo - SP, CEP 04543-000",
             "telefone": "+55 11 5504-2339",
             "urlSite": "https://www.microsoft.com/pt-br",
-            "imagem": "/wdd231/camara/IMG/microsoft.jpg",
+            "imagem": "IMG/microsoft.jpg",
             "nivelAssociacao": "Gold"
         },
         {
@@ -37,7 +37,7 @@
             "endereco": "Rua Doutor José Áureo Bustamante, 455 - Chácara Santo Antônio, São Paulo - SP, CEP 04710-090",
             "telefone": "+55 11 5189-1000",
             "urlSite": "https://www.oracle.com/br/",
-            "imagem": "/wdd231/camara/IMG/Oracle_Logo.jpg",
+            "imagem": "IMG/Oracle_Logo.jpg",
             "nivelAssociacao": "Prata"
         },
         {
@@ -46,7 +46,7 @@
             "endereco": "Av. dos Autonomistas, 1496 - Vila Yara, Osasco - SP, CEP 06020-012",
             "telefone": null,
             "urlSite": "https://www.ifood.com.br",
-            "imagem": "/wdd231/camara/IMG/ifood.jpg",
+            "imagem": "IMG/ifood.jpg",
             "nivelAssociacao": "Prata"
         },
         {
@@ -55,7 +55,7 @@
             "endereco": "Av. Braz Leme, 1000 - Casa Verde, São Paulo - SP, CEP 02511-000",
             "telefone": "0800 70 98 100",
             "urlSite": "https://www.totvs.com",
-            "imagem": "/wdd231/camara/IMG/totvs.jpg",
+            "imagem": "IMG/totvs.jpg",
             "nivelAssociacao": "Membro"
         },
         {
@@ -64,7 +64,7 @@
             "endereco": "Av. das Nações Unidas, 14171 - Marble Tower, 7º andar, São Paulo - SP, CEP 04794-000",
             "telefone": "+55 11 5503-2400",
             "urlSite": "https://www.sap.com/brazil",
-            "imagem": "/wdd231/camara/IMG/SAP.jpg",
+            "imagem": "IMG/SAP.jpg",
             "nivelAssociacao": "Membro"
         }
     ]

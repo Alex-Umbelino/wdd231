@@ -26,9 +26,7 @@ ul {
     background-color: black;
 }
 
-ul li {
-    float: left;
-}
+
 
 ul li a {
     display: block;
@@ -200,7 +198,7 @@ body.dark nav ul li a:hover {
 
 .empresas > p {
     text-align: center;
-    color: #777;
+    color: #333;
     font-size: 14px;
     padding: 0;
     margin: 5px 0 15px;
@@ -236,7 +234,7 @@ body.dark nav ul li a:hover {
     margin: 0;
     padding: 0;
     font-size: 13px;
-    color: #555;
+    color: #333;
     overflow-wrap: anywhere;
 }
 
@@ -266,7 +264,7 @@ body.dark nav ul li a:hover {
 
 .cabecalhoDiretorio p {
     margin: 0;
-    color: #666;
+    color: #333;
 }
 
 .container.modoGrid {
