@@ -1,6 +1,32 @@
 
+:root {
+    --cor-principal: #000000;
+    --cor-secundaria: #222222;
+    --cor-texto: #333333;
+    --cor-borda: #dddddd;
+    --cor-link: #0756a8;
+    --cor-hover: blue;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 body > header {
@@ -9,39 +35,8 @@ body > header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
+    background-color: var(--cor-principal);
     color: white;
-    background-color: black;
-}
-
-main {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    font-size: 17px;
-    padding: 12px;
-}
-
-li a:hover {
-    color: #b3d9ff;
 }
 
 .identidade {
@@ -51,12 +46,26 @@ li a:hover {
 }
 
 .identidade img {
-    height: 50px;
     width: auto;
+    height: 50px;
+}
+
+.titulo h1 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.titulo p {
+    margin: 0;
+    font-size: 13px;
 }
 
 #menu-button {
     display: block;
+    padding: 5px 10px;
+    border: none;
+    background: transparent;
+    color: white;
     font-size: 25px;
     cursor: pointer;
 }
@@ -69,16 +78,32 @@ nav ul {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: black;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: var(--cor-principal);
 }
 
 nav ul.open {
     display: flex;
 }
 
+nav ul li a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: blue;
+}
+
 #temaBotao {
     font-size: 23px;
-    text-decoration: none;
     cursor: pointer;
 }
 
@@ -88,12 +113,11 @@ body.dark {
 }
 
 body.dark header {
-    background-color: #222;
-    color: white;
+    background-color: #222222;
 }
 
 body.dark nav ul {
-    background-color: #222;
+    background-color: #222222;
 }
 
 body.dark nav ul a {
@@ -101,16 +125,7 @@ body.dark nav ul a {
 }
 
 body.dark nav ul li a:hover {
-    color: #b3d9ff;
-}
-
-#imgSP {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
-    flex: none;
+    color: blue;
 }
 
 .container {
@@ -121,28 +136,31 @@ body.dark nav ul li a:hover {
     min-width: 0;
 }
 
-.container button {
-    position: static;
+#imgSP {
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
 
 #botaoT {
     position: absolute;
     bottom: 10px;
     right: 10px;
+    padding: 8px 12px;
     background-color: white;
-    border: 2px solid #555;
+    border: 2px solid #555555;
     border-radius: 10px;
     color: black;
-    padding: 8px 12px;
     text-align: center;
     text-decoration: none;
     font-size: 14px;
-    transition: 0.4s;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 #botaoT:hover {
-    background-color: #555;
+    background-color: #555555;
     color: white;
 }
 
@@ -150,24 +168,23 @@ body.dark nav ul li a:hover {
 .clima {
     width: 100%;
     min-width: 0;
-    box-sizing: border-box;
-    background-color: white;
-    color: #333;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
     margin: 5px 0;
+    padding: 15px;
+    background-color: white;
+    color: #333333;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
 }
 
 .eventos img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    max-height: 180px;
-    object-fit: contain;
     display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 180px;
+    height: auto;
     margin: 0 auto;
+    object-fit: contain;
     border-radius: 6px;
 }
 
@@ -175,7 +192,7 @@ body.dark nav ul li a:hover {
 .clima h2 {
     margin: 0 0 15px;
     padding: 7px;
-    background-color: #222;
+    background-color: #222222;
     color: white;
     border-radius: 8px;
     text-align: center;
@@ -201,8 +218,8 @@ body.dark nav ul li a:hover {
 }
 
 #dadosDoClima h3 {
-    font-size: 22px;
     margin: 0;
+    font-size: 22px;
 }
 
 #dadosDoClima p {
@@ -213,16 +230,24 @@ body.dark nav ul li a:hover {
     display: block;
 }
 
+.previsaoClima {
+    text-align: center;
+}
+
+.secaoEmpresas {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .empresas {
     width: 100%;
     min-width: 0;
-    box-sizing: border-box;
-    background-color: white;
-    color: #333;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
     margin: 5px 0;
+    padding: 15px;
+    background-color: white;
+    color: #333333;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -236,29 +261,39 @@ body.dark nav ul li a:hover {
     margin: 0;
     padding: 5px;
     background-color: transparent;
-    color: #222;
+    color: #222222;
     text-align: center;
     font-size: 19px;
 }
 
 .empresas > p {
-    text-align: center;
-    color: #333;
-    font-size: 13px;
-    padding: 0;
     margin: 5px 0 15px;
+    padding: 0;
+    color: #333333;
+    text-align: center;
+    font-size: 13px;
 }
 
-.empresas .dadosEmpresa {
+.separadorEmpresa {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 1px;
+    margin: 10px auto;
+    background-color: #cccccc;
+}
+
+.empresas .dadosEmpresa,
+.empresas[id^="empresa"] > div:last-child {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 12px;
-    border-top: 1px solid #ccc;
     padding-top: 12px;
 }
 
-.empresas .dadosEmpresa img {
+.empresas .dadosEmpresa img,
+.empresas[id^="empresa"] > div:last-child img {
     flex: 0 0 65px;
     width: 65px;
     min-width: 65px;
@@ -276,32 +311,34 @@ body.dark nav ul li a:hover {
     min-width: 0;
 }
 
-.empresas .textosEmpresa p {
+.empresas .textosEmpresa p,
+.empresas[id^="empresa"] > div:last-child p {
     flex: 1 1 100%;
     min-width: 0;
     margin: 0;
     padding: 0;
+    color: #333333;
     font-size: 13px;
-    color: #333;
     overflow-wrap: anywhere;
 }
 
 .empresas .textosEmpresa a {
-    color: #0756a8;
+    color: var(--cor-link);
     text-decoration: none;
 }
 
 .empresas .textosEmpresa a:hover {
+    color: blue;
     text-decoration: underline;
 }
 
 .cabecalhoDiretorio {
     display: block;
-    text-align: center;
-    padding: 20px 10px;
     margin: 15px 0;
-    background: #f2f2f2;
-    color: #222;
+    padding: 20px 10px;
+    background-color: #f2f2f2;
+    color: #222222;
+    text-align: center;
     border-radius: 10px;
 }
 
@@ -312,8 +349,8 @@ body.dark nav ul li a:hover {
 
 .cabecalhoDiretorio p {
     margin: 0;
+    color: #333333;
     font-size: 14px;
-    color: #333;
 }
 
 .container.modoGrid {
@@ -335,19 +372,19 @@ body.dark nav ul li a:hover {
     min-width: 550px;
     border-collapse: collapse;
     background-color: white;
-    color: #333;
+    color: #333333;
 }
 
 .tabelaEmpresas th,
 .tabelaEmpresas td {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     text-align: left;
     font-size: 13px;
 }
 
 .tabelaEmpresas th {
-    background-color: #222;
+    background-color: #222222;
     color: white;
 }
 
@@ -356,93 +393,105 @@ body.dark nav ul li a:hover {
 }
 
 .tabelaEmpresas a {
-    color: #0756a8;
+    color: var(--cor-link);
     text-decoration: none;
 }
 
 .tabelaEmpresas a:hover {
+    color: blue;
     text-decoration: underline;
 }
 
 .opcoesDiretorio {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     margin: 15px 0;
 }
 
 .visualizacao {
     padding: 9px 15px;
-    border: 1px solid #333;
+    border: 1px solid #333333;
     border-radius: 6px;
     background-color: white;
-    color: #333;
+    color: #333333;
     cursor: pointer;
     font-size: 14px;
 }
 
 .visualizacao.ativa {
-    background-color: #222;
+    background-color: #222222;
     color: white;
 }
 
 .visualizacao:hover {
-    background-color: #555;
+    background-color: #555555;
     color: white;
 }
 
 footer {
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-image: url("../IMG/futuristic-dark-city-dvmmk5j0bahmr1h4.jpg");
+    width: 100%;
+    min-height: 250px;
+    background-image: url("../imagens/futuristic-dark-city-dvmmk5j0bahmr1h4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 250px;
-    box-sizing: border-box;
+}
+
+#ajusteRodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 10px;
 }
 
 .rodape {
-    color: white;
     flex: 1;
+    color: white;
+    text-align: center;
+}
+
+.tituloSociais {
     text-align: center;
 }
 
 .sociais {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 20px;
     color: white;
+    font-size: 25px;
     text-decoration: none;
 }
 
 .sociais a {
     display: inline-block;
-    transition: transform 0.3s;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
 }
 
-.sociais a:hover {
+.sociais a:hover,
+.sociais a:hover i {
+    color: blue;
     transform: scale(1.2);
 }
 
 .sociais i {
+    color: inherit;
     font-size: 25px;
-    color: white;
 }
 
-#ajusteRodape {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    padding: 20px 10px;
-    box-sizing: border-box;
+.creditos {
+    margin-bottom: 0;
 }
