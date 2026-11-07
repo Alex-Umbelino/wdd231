@@ -1,0 +1,448 @@
+
+body {
+    margin: 0;
+}
+
+body > header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    color: white;
+    background-color: black;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    float: none;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    padding: 12px;
+}
+
+li a:hover {
+    color: blue;
+}
+
+.identidade {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.identidade img {
+    height: 50px;
+    width: auto;
+}
+
+#menu-button {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+}
+
+nav ul.open {
+    display: flex;
+}
+
+#temaBotao {
+    font-size: 23px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark header {
+    background-color: #222;
+    color: white;
+}
+
+body.dark nav ul {
+    background-color: #222;
+}
+
+body.dark nav ul a {
+    color: white;
+}
+
+body.dark nav ul li a:hover {
+    color: blue;
+}
+
+#imgSP {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    flex: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.container button {
+    position: static;
+}
+
+#botaoT {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    border: 2px solid #555;
+    border-radius: 10px;
+    color: black;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#botaoT:hover {
+    background-color: #555;
+    color: white;
+}
+
+.eventos, .clima {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.eventos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.eventos h2, .clima h2 {
+    margin: 0;
+    padding: 7px;
+    background-color: #222;
+    color: white;
+    border-radius: 8px;
+}
+
+.informarOClima {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#iconeDoClima {
+    flex: 1;
+    font-size: 35px;
+    text-align: center;
+}
+
+#dadosDoClima {
+    flex: 2;
+    min-width: 150px;
+}
+
+#dadosDoClima h3 {
+    font-size: 22px;
+    margin: 0;
+}
+
+#dadosDoClima p {
+    margin: 5px 0;
+}
+
+#descricaoClima {
+    display: block;
+}
+
+.empresas {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.empresas:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.18);
+}
+
+.empresas h2 {
+    margin: 0;
+    padding: 5px;
+    background-color: transparent;
+    color: #222;
+    text-align: center;
+    font-size: 19px;
+}
+
+.empresas > p {
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+    padding: 0;
+    margin: 5px 0 15px;
+}
+
+.empresas .dadosEmpresa {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 12px;
+    border-top: 1px solid #ccc;
+    padding-top: 12px;
+}
+
+.empresas .dadosEmpresa img {
+    flex: 0 0 65px;
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.empresas .textosEmpresa {
+    display: flex;
+    flex: 1 1 150px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+}
+
+.empresas .textosEmpresa p {
+    flex: 1 1 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+.empresas .textosEmpresa a {
+    color: #0756a8;
+    text-decoration: none;
+}
+
+.empresas .textosEmpresa a:hover {
+    text-decoration: underline;
+}
+
+.empresas[id^="empresa"] > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 12px;
+}
+
+.empresas[id^="empresa"] img {
+    flex: 0 0 65px;
+    width: 65px;
+    height: 65px;
+    max-width: 65px;
+    object-fit: contain;
+}
+
+.empresas[id^="empresa"] > div:last-child p {
+    flex: 1 1 100%;
+    min-width: 0;
+    margin: 5px 0;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.cabecalhoDiretorio {
+    display: block;
+    text-align: center;
+    padding: 20px 10px;
+    margin: 15px 0;
+    background: #f2f2f2;
+    color: #222;
+    border-radius: 10px;
+}
+
+.cabecalhoDiretorio h1 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.cabecalhoDiretorio p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.container.modoGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.container.modoLista {
+    display: block;
+    overflow-x: auto;
+    margin-bottom: 25px;
+}
+
+.tabelaEmpresas {
+    width: 100%;
+    min-width: 550px;
+    border-collapse: collapse;
+    background-color: white;
+    color: #333;
+}
+
+.tabelaEmpresas th,
+.tabelaEmpresas td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 13px;
+}
+
+.tabelaEmpresas th {
+    background-color: #222;
+    color: white;
+}
+
+.tabelaEmpresas tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabelaEmpresas a {
+    color: #0756a8;
+    text-decoration: none;
+}
+
+.tabelaEmpresas a:hover {
+    text-decoration: underline;
+}
+
+.opcoesDiretorio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.visualizacao {
+    padding: 9px 15px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.visualizacao.ativa {
+    background-color: #222;
+    color: white;
+}
+
+.visualizacao:hover {
+    background-color: #555;
+    color: white;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-image: url("../IMG/futuristic-dark-city-dvmmk5j0bahmr1h4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 250px;
+    box-sizing: border-box;
+}
+
+.rodape {
+    color: white;
+    flex: 1;
+    text-align: center;
+}
+
+.sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.sociais a {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.sociais a:hover {
+    transform: scale(1.2);
+}
+
+.sociais i {
+    font-size: 25px;
+    color: red;
+}
+
+#ajusteRodape {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
