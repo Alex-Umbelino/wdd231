@@ -4,6 +4,7 @@
     --cor-secundaria: #222222;
     --cor-texto: #333333;
     --cor-borda: #dddddd;
+    --cor-fundo: #f5f5f5;
     --cor-link: #0756a8;
     --cor-hover: blue;
 }
@@ -494,4 +495,9 @@ footer {
 
 .creditos {
     margin-bottom: 0;
+}
+.tituloEmpresas {
+    margin: 20px 0;
+    text-align: center;
+    color: var(--cor-texto);
 }

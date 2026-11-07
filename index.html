@@ -1,69 +1,104 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Conecta São Paulo</title>
+
+    <!-- SEO -->
     <meta name="description" content="Conecta São Paulo reúne informações sobre clima, eventos e empresas para conectar comerciantes, profissionais e oportunidades de negócios.">
     <meta name="author" content="Luiz Alex Umbelino">
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Conecta São Paulo">
     <meta property="og:description" content="Consulte informações sobre São Paulo, conheça empresas e descubra oportunidades de negócios.">
-    <meta property="og:image" content="https://alex-umbelino.github.io/wdd231/camara/imagens/logo.jpg">
+    <meta property="og:image" content="https://alex-umbelino.github.io/wdd231/camara/imagens/logo.webp">
     <meta property="og:url" content="https://alex-umbelino.github.io/wdd231/index.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Favicon -->
     <link rel="icon" href="camara/imagens/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="camara/estilos/normalize.css" > 
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="camara/estilos/normalize.css">
     <link rel="stylesheet" href="camara/estilos/telas-grandes.css" media="screen and (min-width: 641px)">
     <link rel="stylesheet" href="camara/estilos/telas-pequenas.css" media="screen and (max-width: 640px)">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- JavaScript -->
     <script src="camara/scripts/diretorio.js" defer></script>
 </head>
+
 <body>
+
     <header>
-       
+
         <div class="identidade">
-            <img src="camara/imagens/logo.webp" alt="Logotipo" >
-             <div class="titulo">
+            <img src="camara/imagens/logo.webp" alt="Logotipo Conecta São Paulo">
+
+            <div class="titulo">
                 <h1>Conecta São Paulo</h1>
                 <p>Câmara de Comércio</p>
-             </div>
+            </div>
         </div>
+
         <nav>
-            <button id="menu-button">☰</button>
+            <button id="menu-button" aria-label="Abrir menu">☰</button>
+
             <ul>
-                
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="camara/diretorio.html">Diretorio</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="camara/diretorio.html">Diretório</a></li>
                 <li><a href="#">Associar-se</a></li>
-                <li><a href="#"> Descobrir</a></li>
-                <li><a href="#"id="temaBotao" aria-label="Alterar tema"><span id="temaIcone">🌙</span></a></li>
+                <li><a href="#">Descobrir</a></li>
+                <li>
+                    <a href="#" id="temaBotao" aria-label="Alterar tema">
+                        <span id="temaIcone">🌙</span>
+                    </a>
+                </li>
             </ul>
         </nav>
 
     </header>
 
-    <main >
+    <main>
+
+        <!-- Imagem principal -->
         <section class="container">
-             <img id="imgSP" src="camara/imagens/background.jpg" alt="papel de parede SP">
-             <a id="botaoT" href="#" aria-label="Informações sobre ingresso para palestra">   Ingresso Palestra</a>
+            <img id="imgSP" src="camara/imagens/background.jpg" alt="Paisagem urbana de São Paulo">
+
+            <a id="botaoT" href="#" aria-label="Informações sobre ingresso para palestra">
+                Ingresso Palestra
+            </a>
         </section>
+
         <h1>Início</h1>
 
-        <section class="container"> <!-- eventos e climas-->
+        <!-- Eventos e clima -->
+        <section class="container">
+
             <div class="eventos">
                 <h2>Eventos</h2>
-                <div><img src="camara/imagens/evento.jpg" alt="Eventos em São Paulo"></div>
+
+                <div>
+                    <img src="camara/imagens/evento.jpg" alt="Eventos em São Paulo">
+                </div>
             </div>
+
             <div class="clima">
-                 <h2>Clima</h2>
-                 <div class="informarOClima">           
+                <h2>Clima</h2>
+
+                <div class="informarOClima">
+
                     <div id="iconeDoClima"></div>
+
                     <div id="dadosDoClima">
                         <h3 id="temperaturaAtual"></h3>
                         <strong id="descricaoClima"></strong>
@@ -72,62 +107,72 @@
                         <p id="umidade"></p>
                         <p id="nascerDoSol"></p>
                         <p id="porDoSol"></p>
-
                     </div>
-                 </div>
-                
 
-
-
+                </div>
             </div>
+
             <div class="clima previsaoClima">
                 <h2>Previsão do Clima</h2>
+
                 <div>
                     <p id="mostrarTemp"></p>
                 </div>
-                 
             </div>
+
         </section>
 
-        <!--EMPRESAS-->
-            <section class="container secaoEmpresas">
-                
-            <div  class="empresas" id="empresa1">
+        <!-- Empresas -->
+        <section class="container secaoEmpresas">
+
+            <div class="empresas" id="empresa1">
                 <h2></h2>
                 <p></p>
+
                 <div class="separadorEmpresa"></div>
 
-                <div >
-                    <img id="imgEmpresas" src="" alt=" Empresa de exemplo">
-                    <p><strong>Endereço:</strong></p>
-                    <p><strong>Telefone:</strong></p>
-                    
+                <div>
+                    <img class="imgEmpresas" src="" alt="Empresa de exemplo">
+
+                    <div class="textosEmpresa">
+                        <p><strong>Endereço:</strong></p>
+                        <p><strong>Telefone:</strong></p>
+                        <p><strong>Site:</strong></p>
+                    </div>
                 </div>
             </div>
 
             <div class="empresas" id="empresa2">
                 <h2></h2>
                 <p></p>
+
                 <div class="separadorEmpresa"></div>
 
                 <div>
-                    <img id="imgEmpresas"src="" alt="Empresa de exemplo">
-                    <p><strong>Endereço:</strong></p>
-                    <p><strong>Telefone:</strong></p>
-                    
+                    <img class="imgEmpresas" src="" alt="Empresa de exemplo">
+
+                    <div class="textosEmpresa">
+                        <p><strong>Endereço:</strong></p>
+                        <p><strong>Telefone:</strong></p>
+                        <p><strong>Site:</strong></p>
+                    </div>
                 </div>
             </div>
 
             <div class="empresas" id="empresa3">
                 <h2></h2>
                 <p></p>
+
                 <div class="separadorEmpresa"></div>
 
                 <div>
-                    <img id="imgEmpresas" src="" alt="Empresa de exemplo">
-                    <p><strong>Endereço:</strong></p>
-                    <p><strong>Telefone:</strong></p>
-                    
+                    <img class="imgEmpresas" src="" alt="Empresa de exemplo">
+
+                    <div class="textosEmpresa">
+                        <p><strong>Endereço:</strong></p>
+                        <p><strong>Telefone:</strong></p>
+                        <p><strong>Site:</strong></p>
+                    </div>
                 </div>
             </div>
 
@@ -135,43 +180,70 @@
 
     </main>
 
-    <footer >
-       <div id="ajusteRodape">
+    <footer>
+
+        <div id="ajusteRodape">
+
             <div class="rodape">
                 <h2>Conecta-SP Câmara de Comércio</h2>
-                <p>R centroSP <br>
-                Itaim Bibi, pinheiros,123<br>
-                chama.sp@conectasp.com.br<br>
-                (11)99999-9999
+
+                <p>
+                    R centroSP <br>
+                    Itaim Bibi, pinheiros,123<br>
+                    chama.sp@conectasp.com.br<br>
+                    (11)99999-9999
                 </p>
             </div>
+
             <div class="rodape">
-                <h2 class="tituloSociais">Midias Sociais</h2>
-                    <div class="sociais">
-                            <div>
-                                <a href="https://br.linkedin.com/in/alex-umbelino-1760ba261" aria-label="LinkedIn de Alex Umbelino">in</a>
-                            </div>
+                <h2 class="tituloSociais">Mídias Sociais</h2>
 
-                            <div>
-                                <a href="https://github.com/Alex-Umbelino/wdd231" target="_blank" rel="noopener noreferrer" aria-label="GitHub do projeto">GIT</a>
-                            </div>
+                <div class="sociais">
 
-                            <div>
-                                <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X, antigo Twitter">X</a>
-                            </div>
-                        </div>
+                    <div>
+                        <a href="https://br.linkedin.com/in/alex-umbelino-1760ba261"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn de Alex Umbelino">
+                            in
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://github.com/Alex-Umbelino/wdd231"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub do projeto">
+                            GIT
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://x.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="X, antigo Twitter">
+                            X
+                        </a>
+                    </div>
+
+                </div>
             </div>
+
             <div class="rodape">
                 <h2>Projeto de aula WDD231</h2>
+
                 <p class="creditos">
                     Luiz Alex Umbelino<br>
-                    &copy; Conecta São Paulo Câmara de Compercio<br>
+                    &copy; Conecta São Paulo Câmara de Comércio<br>
                 </p>
-                <p id="ultimaMod" ></p>
+
+                <p id="ultimaMod"></p>
             </div>
+
         </div>
 
     </footer>
-    
+
 </body>
 </html>

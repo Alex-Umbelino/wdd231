@@ -7,34 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Diretório de Empresas | Conecta São Paulo</title>
+
+    <!-- SEO -->
     <meta name="description" content="Explore o diretório do Conecta São Paulo e conheça empresas, serviços e oportunidades de negócios.">
     <meta name="author" content="Luiz Alex Umbelino">
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Diretório de Empresas | Conecta São Paulo">
     <meta property="og:description" content="Conheça as empresas participantes do Conecta São Paulo e encontre novos parceiros e oportunidades de negócios.">
-    <meta property="og:image" content="https://alex-umbelino.github.io/wdd231/camara/IMG/logo.jpg">
+    <meta property="og:image" content="https://alex-umbelino.github.io/wdd231/camara/imagens/logo.webp">
     <meta property="og:url" content="https://alex-umbelino.github.io/wdd231/camara/diretorio.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" href="imagens/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="estilos/normalize.css"> 
-    <link rel="stylesheet" href="estilos/telas-pequenas.css" media="screen and (max-width: 640px)">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-grandes.css" media="screen and (min-width: 641px)">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css" media="screen and (max-width: 640px)">
+
+    <!-- JavaScript -->
     <script src="scripts/diretorio.js" defer></script>
 </head>
 
 <body>
 
+    <!-- Cabeçalho principal -->
     <header>
 
         <div class="identidade">
             <img src="imagens/logo.webp" alt="Logotipo Conecta São Paulo">
 
             <div class="titulo">
-                <h2>Conecta São Paulo</h2>
-                <h3>Câmara de Comércio</h3>
+                <h1>Conecta São Paulo</h1>
+                <p>Câmara de Comércio</p>
             </div>
         </div>
 
@@ -56,67 +69,101 @@
         </nav>
 
     </header>
-<main>
 
-    <header class="cabecalhoDiretorio">
-      <h1>Diretório de Empresas</h1>
-      <p>Conheça as empresas que fazem parte da nossa rede de negócios.</p>
-    </header>
+    <main>
 
-    <div class="opcoesDiretorio">
+        <!-- Apresentação do diretório -->
+        <header class="cabecalhoDiretorio">
+            <h1>Diretório de Empresas</h1>
+            <p>Conheça as empresas que fazem parte da nossa rede de negócios.</p>
+        </header>
 
-        <button id="botaoGrid" class="visualizacao ativa" aria-label="Visualizar em grade">
-            <span aria-hidden="true">▦</span>
-            Grid
-        </button>
+        <!-- Opções de visualização -->
+        <div class="opcoesDiretorio">
 
-        <button id="botaoLista" class="visualizacao" aria-label="Visualizar em lista">
-            <span aria-hidden="true">☷</span>
-            Lista
-        </button>
+            <button id="botaoGrid" class="visualizacao ativa" aria-label="Visualizar em grade">
+                <span aria-hidden="true">▦</span>
+                Grid
+            </button>
 
-    </div>
+            <button id="botaoLista" class="visualizacao" aria-label="Visualizar em lista">
+                <span aria-hidden="true">☷</span>
+                Lista
+            </button>
 
-   <section class="container" id="listaEmpresas">
-    <h2>Empresas associadas</h2>
-   </section>
+        </div>
 
-</main>
-   
-    <footer >
-       <div id="ajusteRodape">
+        <!-- Título separado dos cards -->
+        <h2 class="tituloEmpresas">Empresas associadas</h2>
+
+        <!-- Empresas carregadas pelo JavaScript -->
+        <section class="container modoGrid" id="listaEmpresas" aria-label="Lista de empresas associadas">
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+
+        <div id="ajusteRodape">
+
             <div class="rodape">
                 <h2>Conecta-SP Câmara de Comércio</h2>
-                <p>R centroSP <br>
-                Itaim Bibi, pinheiros,123<br>
-                chama.sp@conectasp.com.br<br>
-                (11)99999-9999
+
+                <p>
+                    R centroSP <br>
+                    Itaim Bibi, pinheiros,123<br>
+                    chama.sp@conectasp.com.br<br>
+                    (11)99999-9999
                 </p>
             </div>
+
             <div class="rodape">
-                <h2 class="tituloSociais">Midias Sociais</h2>
-                   <div class="sociais">
-                        <div>
-                            <a href="https://br.linkedin.com/in/alex-umbelino-1760ba261" aria-label="LinkedIn de Alex Umbelino">in</a>
-                        </div>
+                <h2 class="tituloSociais">Mídias Sociais</h2>
 
-                        <div>
-                            <a href="https://github.com/Alex-Umbelino/wdd231" target="_blank" rel="noopener noreferrer" aria-label="GitHub do projeto">GIT</a>
-                        </div>
+                <div class="sociais">
 
-                        <div>
-                            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X, antigo Twitter">X</a>
-                        </div>
+                    <div>
+                        <a href="https://br.linkedin.com/in/alex-umbelino-1760ba261"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn de Alex Umbelino">
+                            in
+                        </a>
                     </div>
+
+                    <div>
+                        <a href="https://github.com/Alex-Umbelino/wdd231"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub do projeto">
+                            GIT
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://x.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="X, antigo Twitter">
+                            X
+                        </a>
+                    </div>
+
+                </div>
             </div>
+
             <div class="rodape">
                 <h2>Projeto de aula WDD231</h2>
+
                 <p class="creditos">
                     Luiz Alex Umbelino<br>
-                    &copy; Conecta São Paulo Câmara de Compercio<br>
+                    &copy; Conecta São Paulo Câmara de Comércio<br>
                 </p>
-                <p id="ultimaMod" ></p>
+
+                <p id="ultimaMod"></p>
             </div>
+
         </div>
 
     </footer>

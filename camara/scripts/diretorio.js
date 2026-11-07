@@ -31,10 +31,21 @@ if (ultimaMod) {
 }
 
 async function clima() {
+    const temperaturaElemento = document.querySelector("#temperaturaAtual");
+
+    if (!temperaturaElemento) {
+        return;
+    }
+
     const url = "https://api.open-meteo.com/v1/forecast?latitude=-23.5505&longitude=-46.6333&current=temperature_2m,relative_humidity_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=America%2FSao_Paulo&forecast_days=7";
 
     try {
         const resposta = await fetch(url);
+
+        if (!resposta.ok) {
+            throw new Error("Erro ao buscar clima: " + resposta.status);
+        }
+
         const dados = await resposta.json();
 
         const temperatura = dados.current.temperature_2m;
@@ -111,6 +122,7 @@ async function clima() {
                 `;
             }
         }
+
     } catch (erro) {
         console.log("Erro ao buscar previsão:", erro);
     }
@@ -119,6 +131,12 @@ async function clima() {
 clima();
 
 async function empresas() {
+    const primeiroBloco = document.querySelector("#empresa1");
+
+    if (!primeiroBloco) {
+        return;
+    }
+
     const url = "camara/dados/membros.json";
 
     try {
@@ -138,21 +156,38 @@ async function empresas() {
                 continue;
             }
 
+            const empresa = listaEmpresas[i];
+
             const nome = bloco.querySelector("h2");
-            const descricao = bloco.querySelector("p");
-            const imagem = bloco.querySelector("img");
-            const paragrafos = bloco.querySelectorAll("div p");
+            const descricao = bloco.querySelector(":scope > p");
+            const imagem = bloco.querySelector(".imgEmpresas");
+            const paragrafos = bloco.querySelectorAll(".textosEmpresa p");
 
-            nome.textContent = listaEmpresas[i].nomeEmpresa;
-            descricao.textContent = listaEmpresas[i].descricao;
+            nome.textContent = empresa.nomeEmpresa;
+            descricao.textContent = empresa.descricao;
 
-            imagem.src = "camara/" + listaEmpresas[i].imagem;
-            imagem.alt = listaEmpresas[i].nomeEmpresa;
+            imagem.src = "camara/" + empresa.imagem;
+            imagem.alt = empresa.nomeEmpresa;
 
-            paragrafos[0].innerHTML = "<strong>Endereço:</strong> " + listaEmpresas[i].endereco;
-            paragrafos[1].innerHTML = "<strong>Telefone:</strong> " + (listaEmpresas[i].telefone || "Não informado");
-            paragrafos[2].innerHTML = "<strong>Site:</strong> " + listaEmpresas[i].urlSite;
+            if (paragrafos[0]) {
+                paragrafos[0].innerHTML =
+                    "<strong>Endereço:</strong> " + (empresa.endereco || "Não informado");
+            }
+
+            if (paragrafos[1]) {
+                paragrafos[1].innerHTML =
+                    "<strong>Telefone:</strong> " + (empresa.telefone || "Não informado");
+            }
+
+            if (paragrafos[2]) {
+                paragrafos[2].innerHTML =
+                    "<strong>Site:</strong> " +
+                    (empresa.urlSite
+                        ? `<a href="${empresa.urlSite}" target="_blank" rel="noopener noreferrer">Acessar</a>`
+                        : "Não informado");
+            }
         }
+
     } catch (erro) {
         console.log("Erro ao carregar empresas:", erro);
     }
@@ -198,19 +233,32 @@ async function carregarDiretorio() {
 
                     <div class="dadosEmpresa">
 
-                        <img src="${empresa.imagem}" alt="${empresa.nomeEmpresa}">
+                        <img class="imgEmpresas"
+                            src="${empresa.imagem}"
+                            alt="${empresa.nomeEmpresa}">
 
                         <div class="textosEmpresa">
 
-                            <p><strong>Endereço:</strong> ${empresa.endereco || "Não informado"}</p>
+                            <p>
+                                <strong>Endereço:</strong>
+                                ${empresa.endereco || "Não informado"}
+                            </p>
 
-                            <p><strong>Telefone:</strong> ${empresa.telefone || "Não informado"}</p>
+                            <p>
+                                <strong>Telefone:</strong>
+                                ${empresa.telefone || "Não informado"}
+                            </p>
 
-                            <p><strong>Associação:</strong> ${empresa.nivelAssociacao || "Não informado"}</p>
+                            <p>
+                                <strong>Associação:</strong>
+                                ${empresa.nivelAssociacao || "Não informado"}
+                            </p>
 
                             <p>
                                 <strong>Site:</strong>
-                                <a href="${empresa.urlSite}" target="_blank" rel="noopener noreferrer">
+                                <a href="${empresa.urlSite || "#"}"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
                                     Acessar
                                 </a>
                             </p>
@@ -252,7 +300,9 @@ async function carregarDiretorio() {
                         <td>${empresa.nivelAssociacao || "Não informado"}</td>
                         <td>${empresa.telefone || "Não informado"}</td>
                         <td>
-                            <a href="${empresa.urlSite}" target="_blank" rel="noopener noreferrer">
+                            <a href="${empresa.urlSite || "#"}"
+                                target="_blank"
+                                rel="noopener noreferrer">
                                 Acessar
                             </a>
                         </td>

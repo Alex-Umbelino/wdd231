@@ -73,7 +73,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: blue;
+    color: var(--cor-hover);
 }
 
 #menu-button {
@@ -103,7 +103,7 @@ body.dark nav ul a {
 }
 
 body.dark nav ul li a:hover {
-    color: blue;
+    color: var(--cor-hover);
 }
 
 .container {
@@ -272,18 +272,18 @@ body.dark nav ul li a:hover {
     background-color: #cccccc;
 }
 
-.empresas .dadosEmpresa,
-.empresas[id^="empresa"] > div:last-child {
+/* Organização da imagem e dos textos das empresas */
+
+.empresas > div:last-child {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     gap: 12px;
     padding-top: 15px;
 }
 
-.empresas .dadosEmpresa img,
-.empresas[id^="empresa"] > div:last-child img {
+.empresas .imgEmpresas {
     flex: 0 0 75px;
     width: 75px;
     max-width: 75px;
@@ -293,18 +293,15 @@ body.dark nav ul li a:hover {
 
 .empresas .textosEmpresa {
     display: flex;
-    flex: 1 1 200px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 12px 18px;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
     min-width: 0;
+    gap: 8px;
 }
 
-.empresas .textosEmpresa p,
-.empresas[id^="empresa"] > div:last-child p {
-    flex: 1 1 150px;
-    min-width: 0;
-    margin: 5px;
+.empresas .textosEmpresa p {
+    margin: 0;
     padding: 0;
     color: #333333;
     font-size: 14px;
@@ -317,7 +314,7 @@ body.dark nav ul li a:hover {
 }
 
 .empresas .textosEmpresa a:hover {
-    color: blue;
+    color: var(--cor-hover);
     text-decoration: underline;
 }
 
@@ -383,7 +380,7 @@ body.dark nav ul li a:hover {
 }
 
 .tabelaEmpresas a:hover {
-    color: blue;
+    color: var(--cor-hover);
     text-decoration: underline;
 }
 
@@ -461,7 +458,7 @@ footer {
 
 .sociais a:hover,
 .sociais a:hover i {
-    color: blue;
+    color: var(--cor-hover);
     transform: scale(1.5);
 }
 
@@ -472,4 +469,9 @@ footer {
 
 .creditos {
     margin-bottom: 0;
+}
+.tituloEmpresas {
+    margin: 20px 0;
+    text-align: center;
+    color: var(--cor-texto);
 }
