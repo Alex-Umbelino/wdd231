@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Conecta São Paulo</title>
+    <title>Conecta São Paulo Câmara de Comércio | Início</title>
 
     <!-- SEO -->
     <meta name="description" content="Conecta São Paulo reúne informações sobre clima, eventos e empresas para conectar comerciantes, profissionais e oportunidades de negócios.">
     <meta name="author" content="Luiz Alex Umbelino">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Conecta São Paulo">
-    <meta property="og:description" content="Consulte informações sobre São Paulo, conheça empresas e descubra oportunidades de negócios.">
+    <meta property="og:title" content="Conecta São Paulo Câmara de Comércio | Início">
+    <meta property="og:description" content="Descubra empresas, eventos e o clima de São Paulo em um só lugar. Conecte-se a novos clientes e oportunidades de negócio!">
     <meta property="og:image" content="https://alex-umbelino.github.io/wdd231/imagens/logo.webp">
     <meta property="og:url" content="https://alex-umbelino.github.io/wdd231/index.html">
     <meta property="og:type" content="website">
@@ -30,7 +29,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="estilos/normalize.css">
-    <link rel="stylesheet" href="estilos/telas-grandes.css" media="screen and (min-width: 641px)">
+    <link rel="stylesheet" href="estilos/telas-grandes.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css" media="screen and (max-width: 640px)">
 
     <!-- JavaScript -->
@@ -45,7 +44,7 @@
             <img src="imagens/logo.webp" alt="Logotipo Conecta São Paulo">
 
             <div class="titulo">
-                <h1>Conecta São Paulo</h1>
+                <p class="nome-site">Conecta São Paulo</p>
                 <p>Câmara de Comércio</p>
             </div>
         </div>
@@ -58,11 +57,7 @@
                 <li><a href="diretorio.html">Diretório</a></li>
                 <li><a href="#">Associar-se</a></li>
                 <li><a href="#">Descobrir</a></li>
-                <li>
-                    <a href="#" id="temaBotao" aria-label="Alterar tema">
-                        <span id="temaIcone">🌙</span>
-                    </a>
-                </li>
+                <li><a href="#" id="temaBotao" aria-label="Alterar tema"><span id="temaIcone">🌙</span></a></li>
             </ul>
         </nav>
 
@@ -70,16 +65,14 @@
 
     <main>
 
-        <!-- Imagem principal -->
-        <section class="container">
+        <!-- Imagem principal (div em vez de section: não precisa de título) -->
+        <div class="container">
             <img id="imgSP" src="imagens/background.jpg" alt="Paisagem urbana de São Paulo">
 
-            <a id="botaoT" href="#" aria-label="Informações sobre ingresso para palestra">
-                Ingresso Palestra
-            </a>
-        </section>
+            <a id="botaoT" href="#" aria-label="Informações sobre ingresso para palestra">Ingresso Palestra</a>
+        </div>
 
-        <h1>Início</h1>
+        <h1>Conecta São Paulo</h1>
 
         <!-- Eventos e clima -->
         <section class="container">
@@ -100,12 +93,12 @@
                     <div id="iconeDoClima"></div>
 
                     <div id="dadosDoClima">
-                        <h3 id="temperaturaAtual"></h3>
+                        <h3 id="temperaturaAtual">--°C</h3>
                         <strong id="descricaoClima"></strong>
-                        <p>Máxima:<span id="temperaturaMaxima"></span></p>
-                        <p>Mínima:<span id="temperaturaMinima"></span></p>
-                        <p>Humidade:<span id="umidade"></span></p>
-                        <p>Nascer do sol:<span id="nascerDoSol"></span></p>
+                        <p>Máxima: <span id="temperaturaMaxima"></span></p>
+                        <p>Mínima: <span id="temperaturaMinima"></span></p>
+                        <p>Umidade: <span id="umidade"></span></p>
+                        <p>Nascer do sol: <span id="nascerDoSol"></span></p>
                         <p>Pôr do sol: <span id="porDoSol"></span></p>
                     </div>
 
@@ -126,13 +119,13 @@
         <section class="container secaoEmpresas">
 
             <div class="empresas" id="empresa1">
-                <h2></h2>
+                <h2>Carregando empresa...</h2>
                 <p></p>
 
                 <div class="separadorEmpresa"></div>
 
                 <div>
-                    <img class="imgEmpresas" src="" alt="Empresa de exemplo">
+                    <img class="imgEmpresas" src="imagens/logo.webp" alt="Logotipo da empresa" loading="lazy">
 
                     <div class="textosEmpresa">
                         <p><strong>Endereço:</strong></p>
@@ -143,13 +136,13 @@
             </div>
 
             <div class="empresas" id="empresa2">
-                <h2></h2>
+                <h2>Carregando empresa...</h2>
                 <p></p>
 
                 <div class="separadorEmpresa"></div>
 
                 <div>
-                    <img class="imgEmpresas" src="" alt="Empresa de exemplo">
+                    <img class="imgEmpresas" src="imagens/logo.webp" alt="Logotipo da empresa" loading="lazy">
 
                     <div class="textosEmpresa">
                         <p><strong>Endereço:</strong></p>
@@ -160,13 +153,13 @@
             </div>
 
             <div class="empresas" id="empresa3">
-                <h2></h2>
+                <h2>Carregando empresa...</h2>
                 <p></p>
 
                 <div class="separadorEmpresa"></div>
 
                 <div>
-                    <img class="imgEmpresas" src="" alt="Empresa de exemplo">
+                    <img class="imgEmpresas" src="imagens/logo.webp" alt="Logotipo da empresa" loading="lazy">
 
                     <div class="textosEmpresa">
                         <p><strong>Endereço:</strong></p>
@@ -200,32 +193,11 @@
 
                 <div class="sociais">
 
-                    <div>
-                        <a href="https://br.linkedin.com/in/alex-umbelino-1760ba261"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn de Alex Umbelino">
-                            in
-                        </a>
-                    </div>
+                    <div><a href="https://br.linkedin.com/in/alex-umbelino-1760ba261" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Alex Umbelino">in</a></div>
 
-                    <div>
-                        <a href="https://github.com/Alex-Umbelino/wdd231"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub do projeto">
-                            GIT
-                        </a>
-                    </div>
+                    <div><a href="https://github.com/Alex-Umbelino/wdd231" target="_blank" rel="noopener noreferrer" aria-label="GitHub do projeto">GIT</a></div>
 
-                    <div>
-                        <a href="https://x.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="X, antigo Twitter">
-                            X
-                        </a>
-                    </div>
+                    <div><a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X, antigo Twitter">X</a></div>
 
                 </div>
             </div>

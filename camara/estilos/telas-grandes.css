@@ -452,13 +452,8 @@ body.dark .visualizacao {
 footer {
     width: 100%;
     min-height: 300px;
-    background-color: #1a1a1a; /* garante contraste mesmo sem a imagem */
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)),
-        url("../imagens/city.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: black; /* garante contraste mesmo sem a imagem */
+    
 }
 
 #ajusteRodape {
