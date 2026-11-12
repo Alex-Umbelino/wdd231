@@ -108,7 +108,12 @@ nav ul li a[aria-current="page"] {
 }
 
 #temaBotao {
+    padding: 14px 16px;
+    background: none;
+    border: none;
+    color: var(--branco);
     font-size: 25px;
+    cursor: pointer;
 }
 
 /* ===== Tema escuro ===== */
