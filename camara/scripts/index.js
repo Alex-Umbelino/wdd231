@@ -86,6 +86,8 @@ async function clima() {
     const descricaoClima = document.querySelector("#descricaoClima");
     const iconeDoClima = document.querySelector("#iconeDoClima");
     const sensacaoTermica = document.querySelector("#sensacaoTermica");
+    const temperaturaMaxima = document.querySelector("#temperaturaMaxima");
+    const temperaturaMinima = document.querySelector("#temperaturaMinima");
     const umidade = document.querySelector("#umidade");
     const nascerDoSol = document.querySelector("#nascerDoSol");
     const porDoSol = document.querySelector("#porDoSol");
@@ -112,6 +114,36 @@ async function clima() {
         const dadosAtual = await respostaAtual.json();
         const dadosPrevisao = await respostaPrevisao.json();
 
+        const formatador = new Intl.DateTimeFormat("sv-SE", {
+            timeZone: "America/Sao_Paulo",
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit"
+        });
+
+        const formatadorHora = new Intl.DateTimeFormat("en-US", {
+            timeZone: "America/Sao_Paulo",
+            hour: "2-digit",
+            hourCycle: "h23"
+        });
+
+        const hoje = formatador.format(new Date());
+
+        // Máxima e mínima de hoje: clima atual + previsões que ainda restam no dia
+        const itensDeHoje = dadosPrevisao.list.filter(
+            (item) => formatador.format(new Date(item.dt * 1000)) === hoje
+        );
+
+        const maximaHoje = Math.max(
+            dadosAtual.main.temp_max,
+            ...itensDeHoje.map((item) => item.main.temp_max)
+        );
+
+        const minimaHoje = Math.min(
+            dadosAtual.main.temp_min,
+            ...itensDeHoje.map((item) => item.main.temp_min)
+        );
+
         const condicaoAtual = obterCondicaoClimatica(
             dadosAtual.weather[0].id,
             dadosAtual.weather[0].icon
@@ -134,6 +166,14 @@ async function clima() {
 
         if (sensacaoTermica) {
             sensacaoTermica.textContent = `${dadosAtual.main.feels_like.toFixed(1)} °C`;
+        }
+
+        if (temperaturaMaxima) {
+            temperaturaMaxima.textContent = `${maximaHoje.toFixed(1)} °C`;
+        }
+
+        if (temperaturaMinima) {
+            temperaturaMinima.textContent = `${minimaHoje.toFixed(1)} °C`;
         }
 
         if (umidade) {
@@ -159,20 +199,6 @@ async function clima() {
         }
 
         if (mostrarTemp) {
-            const formatador = new Intl.DateTimeFormat("sv-SE", {
-                timeZone: "America/Sao_Paulo",
-                year: "numeric",
-                month: "2-digit",
-                day: "2-digit"
-            });
-
-            const formatadorHora = new Intl.DateTimeFormat("en-US", {
-                timeZone: "America/Sao_Paulo",
-                hour: "2-digit",
-                hourCycle: "h23"
-            });
-
-            const hoje = formatador.format(new Date());
             const previsoesPorDia = {};
 
             dadosPrevisao.list.forEach((item) => {
@@ -241,8 +267,8 @@ async function clima() {
                     <div>
                         <strong>${condicao.icone} ${nomeDia}</strong>
                         <p>${descricao.charAt(0).toUpperCase() + descricao.slice(1)}</p>
-                        <p>Mínima: ${previsao.minima.toFixed(1)} °C</p>
-                        <p>Máxima: ${previsao.maxima.toFixed(1)} °C</p>
+                        <p><strong>Mínima:</strong> ${previsao.minima.toFixed(1)} °C</p>
+                        <p><strong>Máxima:</strong> ${previsao.maxima.toFixed(1)} °C</p>
                     </div>
                 `;
             }).join("");
