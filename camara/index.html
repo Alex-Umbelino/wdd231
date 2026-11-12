@@ -15,7 +15,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Conecta São Paulo">
     <meta property="og:description" content="Consulte informações sobre São Paulo, conheça empresas e descubra oportunidades de negócios.">
-    <meta property="og:image" content="https://alex-umbelino.github.io/wdd231/camara/imagens/logo.webp">
+    <meta property="og:image" content="https://alex-umbelino.github.io/wdd231/imagens/logo.webp">
     <meta property="og:url" content="https://alex-umbelino.github.io/wdd231/index.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
@@ -26,15 +26,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="camara/imagens/logo.ico" type="image/x-icon">
+    <link rel="icon" href="imagens/logo.ico" type="image/x-icon">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="camara/estilos/normalize.css">
-    <link rel="stylesheet" href="camara/estilos/telas-grandes.css" media="screen and (min-width: 641px)">
-    <link rel="stylesheet" href="camara/estilos/telas-pequenas.css" media="screen and (max-width: 640px)">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css" media="screen and (min-width: 641px)">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css" media="screen and (max-width: 640px)">
 
     <!-- JavaScript -->
-    <script src="camara/scripts/diretorio.js" defer></script>
+    <script src="scripts/index.js" defer></script>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
     <header>
 
         <div class="identidade">
-            <img src="camara/imagens/logo.webp" alt="Logotipo Conecta São Paulo">
+            <img src="imagens/logo.webp" alt="Logotipo Conecta São Paulo">
 
             <div class="titulo">
                 <h1>Conecta São Paulo</h1>
@@ -54,8 +54,8 @@
             <button id="menu-button" aria-label="Abrir menu">☰</button>
 
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="camara/diretorio.html">Diretório</a></li>
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
                 <li><a href="#">Associar-se</a></li>
                 <li><a href="#">Descobrir</a></li>
                 <li>
@@ -72,7 +72,7 @@
 
         <!-- Imagem principal -->
         <section class="container">
-            <img id="imgSP" src="camara/imagens/background.jpg" alt="Paisagem urbana de São Paulo">
+            <img id="imgSP" src="imagens/background.jpg" alt="Paisagem urbana de São Paulo">
 
             <a id="botaoT" href="#" aria-label="Informações sobre ingresso para palestra">
                 Ingresso Palestra
@@ -88,7 +88,7 @@
                 <h2>Eventos</h2>
 
                 <div>
-                    <img src="camara/imagens/evento.jpg" alt="Eventos em São Paulo">
+                    <img src="imagens/evento.jpg" alt="Eventos em São Paulo">
                 </div>
             </div>
 
@@ -102,11 +102,11 @@
                     <div id="dadosDoClima">
                         <h3 id="temperaturaAtual"></h3>
                         <strong id="descricaoClima"></strong>
-                        <p id="temperaturaMaxima"></p>
-                        <p id="temperaturaMinima"></p>
-                        <p id="umidade"></p>
-                        <p id="nascerDoSol"></p>
-                        <p id="porDoSol"></p>
+                        <p>Máxima:<span id="temperaturaMaxima"></span></p>
+                        <p>Mínima:<span id="temperaturaMinima"></span></p>
+                        <p>Humidade:<span id="umidade"></span></p>
+                        <p>Nascer do sol:<span id="nascerDoSol"></span></p>
+                        <p>Pôr do sol: <span id="porDoSol"></span></p>
                     </div>
 
                 </div>

@@ -11,7 +11,7 @@
             "telefone": "+1 (800) 421-5048",
             "urlSite": "https://www.nvidia.com/pt-br/",
             "imagem": "imagens/nvidia.jpg",
-            "nivelAssociacao":"Gold"
+            "nivelAssociacao":"Ouro"
         },
         {
             "nomeEmpresa": "Google",
@@ -20,7 +20,7 @@
             "telefone": null,
             "urlSite": "https://www.google.com",
             "imagem": "imagens/google.jpg",
-            "nivelAssociacao": "Gold"
+            "nivelAssociacao": "Ouro"
         },
         {
             "nomeEmpresa": "Microsoft",
@@ -29,7 +29,7 @@
             "telefone": "+55 11 5504-2339",
             "urlSite": "https://www.microsoft.com/pt-br",
             "imagem": "imagens/microsoft.jpg",
-            "nivelAssociacao": "Gold"
+            "nivelAssociacao": "Ouro"
         },
         {
             "nomeEmpresa": "Oracle",
