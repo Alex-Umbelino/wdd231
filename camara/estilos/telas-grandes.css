@@ -1,9 +1,16 @@
 :root {
+    --branco: #ffffff;
+    --preto: #000000;
+    --cinza-hover: #555555;
+    --sombra: #0000001a;
+    --sombra-forte: #0000002e;
+
     --cor-principal: #000000;
     --cor-secundaria: #222222;
     --cor-texto: #333333;
     --cor-fundo: #f5f5f5;
     --cor-borda: #dddddd;
+    --cor-borda-botao: #333333;
     --cor-link: #0756a8;
     --cor-hover: #0756a8;
     --cor-card: #ffffff;
@@ -39,7 +46,7 @@ body > header {
     align-items: center;
     gap: 10px;
     padding: 10px 30px;
-    color: white;
+    color: var(--branco);
     background-color: var(--cor-principal);
 }
 
@@ -78,11 +85,11 @@ nav ul {
 nav ul li a {
     display: block;
     padding: 14px 16px;
-    color: white;
+    color: var(--branco);
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid #0000;
     transition: color 0.3s, border-color 0.3s;
 }
 
@@ -101,12 +108,7 @@ nav ul li a[aria-current="page"] {
 }
 
 #temaBotao {
-    padding: 14px 16px;
-    background: none;
-    border: none;
-    color: white;
     font-size: 25px;
-    cursor: pointer;
 }
 
 /* ===== Tema escuro ===== */
@@ -117,19 +119,13 @@ body.dark {
     --cor-texto: #f1f1f1;
     --cor-fundo: #121212;
     --cor-borda: #444444;
+    --cor-borda-botao: #777777;
     --cor-link: #8ab4f8;
     --cor-hover: #a8c7fa;
     --cor-card: #252525;
     --cor-titulo: #ffffff;
     --cor-fundo-cabecalho: #252525;
     --cor-linha: #333333;
-
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-}
-
-body.dark .visualizacao {
-    border-color: #777777;
 }
 
 /* ===== Página inicial ===== */
@@ -146,7 +142,6 @@ body.dark .visualizacao {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
-    flex: 2;
 }
 
 #botaoT {
@@ -154,34 +149,39 @@ body.dark .visualizacao {
     bottom: 5%;
     right: 5%;
     padding: 10px 20px;
-    background-color: white;
-    border: 2px solid #555555;
+    background-color: var(--branco);
+    border: 2px solid var(--cinza-hover);
     border-radius: 10px;
-    color: black;
-    text-align: center;
+    color: var(--preto);
     text-decoration: none;
     font-size: 16px;
-    cursor: pointer;
     transition: 0.4s;
 }
 
 #botaoT:hover {
-    background-color: #555555;
-    color: white;
+    background-color: var(--cinza-hover);
+    color: var(--branco);
 }
 
+/* Cards (eventos, clima e empresas) */
 .eventos,
-.clima {
-    flex: 1;
+.clima,
+.empresas {
     min-width: 0;
     margin: 5px;
     padding: 18px;
     background-color: var(--cor-card);
-    color: var(--cor-texto);
     border: 1px solid var(--cor-borda);
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 3px 10px var(--sombra);
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.eventos:hover,
+.clima:hover,
+.empresas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 18px var(--sombra-forte);
 }
 
 .eventos {
@@ -190,12 +190,6 @@ body.dark .visualizacao {
 
 .clima {
     flex: 2;
-}
-
-.eventos:hover,
-.clima:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.18);
 }
 
 .eventos img {
@@ -210,7 +204,7 @@ body.dark .visualizacao {
     margin: 0 0 15px;
     padding: 10px;
     background-color: var(--cor-secundaria);
-    color: white;
+    color: var(--branco);
     text-align: center;
     font-size: 21px;
     border-radius: 8px;
@@ -253,8 +247,7 @@ body.dark .visualizacao {
 /* ===== Empresas ===== */
 
 .secaoEmpresas {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .tituloEmpresas {
@@ -263,28 +256,10 @@ body.dark .visualizacao {
     color: var(--cor-titulo);
 }
 
-.empresas {
-    min-width: 0;
-    margin: 5px;
-    padding: 18px;
-    background-color: var(--cor-card);
-    color: var(--cor-texto);
-    border: 1px solid var(--cor-borda);
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.empresas:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.18);
-}
-
 .empresas h2,
 .empresas h3 {
     margin: 0;
     padding: 5px;
-    background-color: transparent;
     color: var(--cor-titulo);
     text-align: center;
     font-size: 21px;
@@ -292,15 +267,11 @@ body.dark .visualizacao {
 
 .empresas > p {
     margin: 5px 0 15px;
-    padding: 0;
-    color: var(--cor-texto);
     text-align: center;
     font-size: 14px;
 }
 
 .separadorEmpresa {
-    display: block;
-    width: 100%;
     max-width: 300px;
     height: 1px;
     margin: 10px auto;
@@ -309,7 +280,6 @@ body.dark .visualizacao {
 
 .empresas > div:last-child {
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     gap: 12px;
@@ -319,7 +289,6 @@ body.dark .visualizacao {
 .empresas .imgEmpresas {
     flex: 0 0 75px;
     width: 75px;
-    max-width: 75px;
     height: 75px;
     object-fit: contain;
 }
@@ -328,25 +297,25 @@ body.dark .visualizacao {
     display: flex;
     flex: 1;
     flex-direction: column;
-    justify-content: center;
     min-width: 0;
     gap: 8px;
 }
 
 .empresas .textosEmpresa p {
     margin: 0;
-    padding: 0;
-    color: var(--cor-texto);
     font-size: 14px;
     overflow-wrap: anywhere;
 }
 
-.empresas .textosEmpresa a {
+/* Links das empresas (início e diretório) */
+.empresas .textosEmpresa a,
+.tabelaEmpresas a {
     color: var(--cor-link);
     text-decoration: none;
 }
 
-.empresas .textosEmpresa a:hover {
+.empresas .textosEmpresa a:hover,
+.tabelaEmpresas a:hover {
     color: var(--cor-hover);
     text-decoration: underline;
 }
@@ -354,7 +323,6 @@ body.dark .visualizacao {
 /* ===== Diretório ===== */
 
 .cabecalhoDiretorio {
-    display: block;
     margin: 20px 0;
     padding: 30px 15px;
     background-color: var(--cor-fundo-cabecalho);
@@ -380,6 +348,10 @@ body.dark .visualizacao {
     margin-bottom: 30px;
 }
 
+#listaEmpresas.modoGrid {
+    min-height: 820px;
+}
+
 .container.modoLista {
     display: block;
     overflow-x: auto;
@@ -390,7 +362,6 @@ body.dark .visualizacao {
     width: 100%;
     border-collapse: collapse;
     background-color: var(--cor-card);
-    color: var(--cor-texto);
 }
 
 .tabelaEmpresas th,
@@ -402,21 +373,11 @@ body.dark .visualizacao {
 
 .tabelaEmpresas th {
     background-color: var(--cor-secundaria);
-    color: white;
+    color: var(--branco);
 }
 
 .tabelaEmpresas tr:nth-child(even) {
     background-color: var(--cor-linha);
-}
-
-.tabelaEmpresas a {
-    color: var(--cor-link);
-    text-decoration: none;
-}
-
-.tabelaEmpresas a:hover {
-    color: var(--cor-hover);
-    text-decoration: underline;
 }
 
 .opcoesDiretorio {
@@ -428,7 +389,7 @@ body.dark .visualizacao {
 
 .visualizacao {
     padding: 10px 20px;
-    border: 1px solid #333333;
+    border: 1px solid var(--cor-borda-botao);
     border-radius: 6px;
     background-color: var(--cor-card);
     color: var(--cor-texto);
@@ -439,21 +400,20 @@ body.dark .visualizacao {
 
 .visualizacao.ativa {
     background-color: var(--cor-secundaria);
-    color: white;
+    color: var(--branco);
 }
 
 .visualizacao:hover {
-    background-color: #555555;
-    color: white;
+    background-color: var(--cinza-hover);
+    color: var(--branco);
 }
 
 /* ===== Rodapé ===== */
 
 footer {
-    width: 100%;
     min-height: 300px;
-    background-color: black; /* garante contraste mesmo sem a imagem */
-    
+    background-color: var(--preto);
+    color: var(--branco);
 }
 
 #ajusteRodape {
@@ -468,7 +428,6 @@ footer {
 
 .rodape {
     flex: 1;
-    color: white;
 }
 
 .tituloSociais {
@@ -480,31 +439,21 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    color: white;
     font-size: 30px;
 }
 
 .sociais a {
     display: inline-block;
-    color: white;
+    color: var(--branco);
     text-decoration: none;
     transition: transform 0.3s, color 0.3s;
 }
 
-.sociais a:hover,
-.sociais a:hover i {
+.sociais a:hover {
     color: var(--cor-destaque-escuro);
     transform: scale(1.5);
 }
 
-.sociais i {
-    color: inherit;
-    font-size: 30px;
-}
-
 .creditos {
     margin-bottom: 0;
-}
-#listaEmpresas.modoGrid {
-    min-height: 820px;
 }
