@@ -140,14 +140,14 @@
         min-height: 0;
     }
 
-    .tabelaEmpresas {
-        min-width: 600px;
+    .container.modoLista {
+        overflow-x: visible;
     }
 
     .tabelaEmpresas th,
     .tabelaEmpresas td {
-        padding: 10px;
-        font-size: 13px;
+        padding: 8px 6px;
+        font-size: 12px;
     }
 
     .opcoesDiretorio {
