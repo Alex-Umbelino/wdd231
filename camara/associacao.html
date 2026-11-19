@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Conecta São Paulo Câmara de Comércio | Associação</title>
+    <title>Associe-se | Conecta São Paulo Câmara de Comércio</title>
 
     <!-- SEO -->
     <meta name="description" content="Associe-se ao Conecta São Paulo e escolha o nível de associação ideal para a sua empresa ou organização.">
     <meta name="author" content="Luiz Alex Umbelino">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Conecta São Paulo Câmara de Comércio | Associação">
+    <meta property="og:title" content="Associe-se | Conecta São Paulo Câmara de Comércio">
     <meta property="og:description" content="Faça parte da rede de negócios do Conecta São Paulo. Conheça os níveis de associação e inscreva-se.">
     <meta property="og:image" content="https://alex-umbelino.github.io/wdd231/camara/imagens/logo.webp">
     <meta property="og:url" content="https://alex-umbelino.github.io/wdd231/camara/associacao.html">
@@ -34,7 +34,7 @@
 
     <!-- JavaScript -->
     <script src="scripts/index.js" defer></script>
-    <script src="scripts/associacaoEagradecimento.js" defer></script>
+    <script src="scripts/associacao-agradecimento.js" defer></script>
 </head>
 
 <body>
@@ -69,7 +69,7 @@
         <section>
 
             <form method="get" action="agradecimento.html">
-                <h1>Formulário de inscrição</h1>
+                <h1>Associe-se ao Conecta São Paulo</h1>
 
                 <fieldset class="niveis">
                     <legend>Dados da inscrição</legend>
@@ -81,7 +81,7 @@
                     <input type="text" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome" title="Digite seu sobrenome" autocomplete="family-name" required>
 
                     <label for="cargo">Cargo na organização</label>
-                    <input type="text" id="cargo" name="cargo" placeholder="Ex.: Gerente" title="Apenas letras, hifens e espaços, com no mínimo 7 caracteres" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\- ]{7,}">
+                    <input type="text" id="cargo" name="cargo" placeholder="Ex.: Gerente-Geral" title="Apenas letras, hifens e espaços, com no mínimo 7 caracteres" autocomplete="cargo-na-organizacao" pattern="[A-Za-zÀ-ÿ\- ]{7,}">
 
                     <label for="email">Endereço de e-mail</label>
                     <input type="email" id="email" name="email" placeholder="seuemail@dominio.com.br" title="Digite seu e-mail" autocomplete="email" required>
@@ -90,14 +90,14 @@
                     <input type="tel" id="numCelular" name="numCelular" placeholder="(11) 99999-9999" title="Digite seu número de celular" autocomplete="tel" required>
 
                     <label for="nomeOrg">Nome da empresa/organização</label>
-                    <input type="text" id="nomeOrg" name="nomeOrg" placeholder="Nome da empresa" title="Digite o nome da empresa" autocomplete="organization" required>
+                    <input type="text" id="nomeOrg" name="nomeOrg" placeholder="Nome da empresa" title="Digite o nome da empresa" autocomplete="organizacao" required>
 
                     <fieldset class="radioAjuste">
                         <legend>Nível de associação</legend>
-                        <label><input type="radio" name="associacao" value="NP" title="Associação NP" required> NP</label>
-                        <label><input type="radio" name="associacao" value="Bronze" title="Associação Bronze"> Bronze</label>
-                        <label><input type="radio" name="associacao" value="Prata" title="Associação Prata"> Prata</label>
-                        <label><input type="radio" name="associacao" value="Ouro" title="Associação Ouro"> Ouro</label>
+                        <label><input type="radio" name="associacao" value="np" title="Associação NP" required> NP</label>
+                        <label><input type="radio" name="associacao" value="bronze" title="Associação Bronze"> Bronze</label>
+                        <label><input type="radio" name="associacao" value="silver" title="Associação Prata"> Prata</label>
+                        <label><input type="radio" name="associacao" value="gold" title="Associação Ouro"> Ouro</label>
                     </fieldset>
 
                     <label for="descricao">Descrição da empresa</label>

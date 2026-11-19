@@ -34,10 +34,10 @@ if (nomeExibicao) {
         : "";
 
     const niveis = {
-        NP: { nome: "NP", icone: "🤝" },
-        Bronze: { nome: "Bronze", icone: "🥉" },
-        Prata: { nome: "Prata", icone: "🥈" },
-        Ouro: { nome: "Ouro", icone: "🥇" }
+        np: { nome: "NP", icone: "🤝" },
+        bronze: { nome: "Bronze", icone: "🥉" },
+        silver: { nome: "Prata", icone: "🥈" },
+        gold: { nome: "Ouro", icone: "🥇" }
     };
 
     const infoNivel = niveis[nivel];

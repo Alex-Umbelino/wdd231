@@ -32,7 +32,6 @@ body {
     background-color: var(--cor-fundo);
       display: flex;
     flex-direction: column;
-    min-height: 100vh;
     min-height: 100dvh; 
 }
 
@@ -687,7 +686,7 @@ dialog {
     color: var(--cor-texto);
     border: 1px solid var(--cor-borda);
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px #0000004d;
 }
 
 dialog h2 {
@@ -696,7 +695,7 @@ dialog h2 {
 }
 
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #00000099;
 }
 
 /* Botão "x" no canto do modal */

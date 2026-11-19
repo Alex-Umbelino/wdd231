@@ -1,144 +1,142 @@
-body > header {
-    position: relative;
-    padding: 10px 15px;
-}
+@media screen and (max-width: 640px) {
 
-.identidade img {
-    height: 50px;
-}
+    body > header {
+        position: relative;
+        padding: 10px 15px;
+    }
 
-.titulo .nome-site {
-    font-size: 1.4em;
-}
+    .identidade img {
+        height: 50px;
+    }
 
-#menu-button {
-    display: block;
-    padding: 8px 12px;
-    background: none;
-    border: none;
-    color: var(--branco);
-    font-size: 30px;
-    cursor: pointer;
-}
+    .titulo .nome-site {
+        font-size: 1.4em;
+    }
 
-nav ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    flex-direction: column;
-    align-items: stretch;
-}
+    #menu-button {
+        display: block;
+        padding: 8px 12px;
+        background: none;
+        border: none;
+        color: var(--branco);
+        font-size: 30px;
+        cursor: pointer;
+    }
 
-nav ul.open {
-    display: flex;
-}
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-nav ul li {
-    width: 100%;
-    text-align: center;
-}
+    nav ul.open {
+        display: flex;
+    }
 
-#temaBotao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 14px 16px;
-    background: none;
-    border: none;
-    border-bottom: 3px solid transparent;
-    color: var(--branco);
-    font-family: inherit;
-    font-size: 25px;
-    line-height: 30px;
-    cursor: pointer;
-}
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
 
-main {
-    padding: 0 12px;
-}
+    #temaBotao {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 3px solid #0000;
+        font-family: inherit;
+        line-height: 30px;
+    }
 
-.container {
-    flex-direction: column;
-}
+    main {
+        padding: 0 12px;
+    }
 
-.eventos,
-.clima,
-.empresas {
-    margin: 5px 0;
-}
+    .container {
+        flex-direction: column;
+    }
 
-#ajusteAssociacao {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0 12px 20px;
-}
+    .eventos,
+    .clima,
+    .empresas {
+        margin: 5px 0;
+    }
 
-#ajusteAssociacao > *,
-fieldset {
-    min-width: 0;
-    min-inline-size: 0;
-}
-#ajusteAssociacao h1,
-#ajusteAssociacao h2 {
-    font-size: 22px;
-    text-align: center;
-}
+    #ajusteAssociacao {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 12px 20px;
+    }
 
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-textarea {
-    font-size: 16px;
-}
+    #ajusteAssociacao > *,
+    fieldset {
+        min-width: 0;
+        min-inline-size: 0;
+    }
 
-.radioAjuste {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-}
+    #ajusteAssociacao h1,
+    #ajusteAssociacao h2 {
+        font-size: 22px;
+        text-align: center;
+    }
 
-.radioAjuste label {
-    justify-content: center;
-    margin: 0;
-    padding: 10px;
-}
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+        font-size: 16px;
+    }
 
-#botaoInscreverSe {
-    width: 100%;
-    padding: 14px;
-}
+    .radioAjuste {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
 
-#botaoInscreverSe:hover {
-    transform: none;
-}
+    .radioAjuste label {
+        justify-content: center;
+        margin: 0;
+        padding: 10px;
+    }
 
-.analisar {
-    padding: 8px 0;
-}
+    #botaoInscreverSe {
+        width: 100%;
+        padding: 14px;
+    }
 
-dialog h2 {
-    padding-right: 40px;
-}
+    #botaoInscreverSe:hover {
+        transform: none;
+    }
 
-#agradecimento {
-    padding: 20px 15px;
-}
+    .analisar {
+        padding: 8px 0;
+    }
 
-#agradecimento h1 {
-    font-size: 24px;
-}
+    dialog h2 {
+        padding-right: 40px;
+    }
 
-#ajusteRodape {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    text-align: center;
-}
+    #agradecimento {
+        padding: 20px 15px;
+    }
 
-.rodape p {
-    overflow-wrap: anywhere;
+    #agradecimento h1 {
+        font-size: 24px;
+    }
+
+    #ajusteRodape {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .rodape p {
+        overflow-wrap: anywhere;
+    }
 }
