@@ -3,32 +3,6 @@ if (fonte) {
     fonte.rel = "stylesheet";
 }
 
-const botao = document.querySelector("#menu-button");
-const menu = document.querySelector("nav ul");
-
-if (botao && menu) {
-    botao.addEventListener("click", () => {
-        const aberto = menu.classList.toggle("open");
-        botao.setAttribute("aria-expanded", aberto);
-    });
-}
-
-const botaoTema = document.querySelector("#temaBotao");
-const temaIcone = document.querySelector("#temaIcone");
-
-if (botaoTema && temaIcone) {
-    botaoTema.addEventListener("click", () => {
-        const escuro = document.body.classList.toggle("dark");
-        temaIcone.textContent = escuro ? "☀️" : "🌙";
-    });
-}
-
-const ultimaMod = document.querySelector("#ultimaMod");
-
-if (ultimaMod) {
-    ultimaMod.textContent = `Última modificação: ${document.lastModified}`;
-}
-
 async function carregarDiretorio() {
     const container = document.querySelector("#listaEmpresas");
     const botaoGrid = document.querySelector("#botaoGrid");

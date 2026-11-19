@@ -1,176 +1,144 @@
-@media screen and (max-width: 640px) {
+body > header {
+    position: relative;
+    padding: 10px 15px;
+}
 
-    main {
-        padding: 0 12px;
-    }
+.identidade img {
+    height: 50px;
+}
 
-    body > header {
-        padding: 10px 15px;
-    }
+.titulo .nome-site {
+    font-size: 1.4em;
+}
 
-    .identidade {
-        gap: 8px;
-    }
+#menu-button {
+    display: block;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    color: var(--branco);
+    font-size: 30px;
+    cursor: pointer;
+}
 
-    .identidade img {
-        height: 50px;
-    }
+nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    flex-direction: column;
+    align-items: stretch;
+}
 
-    .titulo .nome-site {
-        font-size: 1.3em;
-    }
+nav ul.open {
+    display: flex;
+}
 
-    #menu-button {
-        display: block;
-        padding: 10px;
-        background: none;
-        border: none;
-        color: var(--branco);
-        font-size: 28px;
-        cursor: pointer;
-    }
+nav ul li {
+    width: 100%;
+    text-align: center;
+}
 
-    nav {
-        width: 100%;
-    }
+#temaBotao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 16px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--branco);
+    font-family: inherit;
+    font-size: 25px;
+    line-height: 30px;
+    cursor: pointer;
+}
 
-    nav ul {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-    }
+main {
+    padding: 0 12px;
+}
 
-    nav ul.open {
-        display: flex;
-    }
+.container {
+    flex-direction: column;
+}
 
-    nav ul li a {
-        padding: 12px;
-        font-size: 17px;
-    }
+.eventos,
+.clima,
+.empresas {
+    margin: 5px 0;
+}
 
-    #temaBotao {
-        padding: 8px;
-        font-size: 22px;
-    }
+#ajusteAssociacao {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 12px 20px;
+}
 
-    .container {
-        flex-direction: column;
-    }
+#ajusteAssociacao > *,
+fieldset {
+    min-width: 0;
+    min-inline-size: 0;
+}
+#ajusteAssociacao h1,
+#ajusteAssociacao h2 {
+    font-size: 22px;
+    text-align: center;
+}
 
-    #imgSP {
-        height: auto;
-        max-height: none;
-    }
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    font-size: 16px;
+}
 
-    #botaoT {
-        bottom: 10px;
-        right: 10px;
-        font-size: 14px;
-        padding: 8px 12px;
-    }
+.radioAjuste {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
 
-    .eventos,
-    .clima {
-        margin: 0;
-        padding: 14px;
-    }
+.radioAjuste label {
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+}
 
-    .eventos h2,
-    .clima h2 {
-        font-size: 19px;
-    }
+#botaoInscreverSe {
+    width: 100%;
+    padding: 14px;
+}
 
-    .informarOClima {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+#botaoInscreverSe:hover {
+    transform: none;
+}
 
-    #iconeDoClima {
-        font-size: 38px;
-    }
+.analisar {
+    padding: 8px 0;
+}
 
-    #dadosDoClima h3 {
-        font-size: 21px;
-    }
+dialog h2 {
+    padding-right: 40px;
+}
 
-    .tituloEmpresas {
-        font-size: 23px;
-    }
+#agradecimento {
+    padding: 20px 15px;
+}
 
-    .empresas {
-        margin: 0;
-        padding: 12px;
-    }
+#agradecimento h1 {
+    font-size: 24px;
+}
 
-    .empresas > div:last-child {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+#ajusteRodape {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    text-align: center;
+}
 
-    .empresas .imgEmpresas {
-        flex: 0 0 65px;
-        width: 65px;
-        height: 65px;
-    }
-
-    .empresas .textosEmpresa {
-        flex: 1 1 180px;
-    }
-
-    .cabecalhoDiretorio {
-        margin: 15px 0;
-        padding: 20px 12px;
-    }
-
-    .cabecalhoDiretorio h1 {
-        font-size: 24px;
-    }
-
-    .cabecalhoDiretorio p {
-        font-size: 14px;
-    }
-
-    .container.modoGrid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    #listaEmpresas.modoGrid {
-        min-height: 0;
-    }
-
-    .container.modoLista {
-        overflow-x: visible;
-    }
-
-    .tabelaEmpresas th,
-    .tabelaEmpresas td {
-        padding: 8px 6px;
-        font-size: 12px;
-    }
-
-    .opcoesDiretorio {
-        flex-wrap: wrap;
-    }
-
-    .visualizacao {
-        padding: 10px 14px;
-        font-size: 14px;
-    }
-
-    #ajusteRodape {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-        padding: 25px 15px;
-    }
-
-    .sociais {
-        gap: 20px;
-    }
-
-    footer {
-        min-height: 0;
-    }
+.rodape p {
+    overflow-wrap: anywhere;
 }

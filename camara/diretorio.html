@@ -7,11 +7,9 @@
 
     <title>Conecta São Paulo Câmara de Comércio | Diretório</title>
 
-    <!-- SEO -->
     <meta name="description" content="Explore o diretório do Conecta São Paulo e conheça empresas, serviços e oportunidades de negócios.">
     <meta name="author" content="Luiz Alex Umbelino">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Conecta São Paulo Câmara de Comércio | Diretório">
     <meta property="og:description" content="Conheça as empresas participantes do Conecta São Paulo e encontre novos parceiros e oportunidades de negócios.">
     <meta property="og:image" content="https://alex-umbelino.github.io/wdd231/camara/imagens/logo.webp">
@@ -19,27 +17,23 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
 
-    <!-- Google Fonts (só os pesos usados: 400 e 700) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" id="fontePoppins" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"></noscript>
 
-    <!-- Favicon -->
     <link rel="icon" href="imagens/logo.ico" type="image/x-icon">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-grandes.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css" media="screen and (max-width: 640px)">
 
-    <!-- JavaScript -->
+    <script src="scripts/index.js" defer></script>
     <script src="scripts/diretorio.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Cabeçalho principal -->
     <header>
 
         <div class="identidade">
@@ -57,7 +51,7 @@
             <ul id="menu-lista">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="diretorio.html" aria-current="page">Diretório</a></li>
-                <li><a href="#">Associar-se</a></li>
+                <li><a href="associacao.html">Associar-se</a></li>
                 <li><a href="#">Descobrir</a></li>
 
                 <li>
@@ -72,13 +66,11 @@
 
     <main>
 
-        <!-- Apresentação do diretório -->
         <header class="cabecalhoDiretorio">
             <h1>Diretório de Empresas</h1>
             <p>Conheça as empresas que fazem parte da nossa rede de negócios.</p>
         </header>
 
-        <!-- Opções de visualização -->
         <div class="opcoesDiretorio">
 
             <button id="botaoGrid" class="visualizacao ativa">
@@ -93,16 +85,13 @@
 
         </div>
 
-        <!-- Título separado dos cards -->
         <h2 class="tituloEmpresas">Empresas associadas</h2>
 
-        <!-- Empresas carregadas pelo JavaScript -->
         <section class="container modoGrid" id="listaEmpresas" aria-label="Lista de empresas associadas">
         </section>
 
     </main>
 
-    <!-- Rodapé -->
     <footer>
 
         <div id="ajusteRodape">

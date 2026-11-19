@@ -3,20 +3,27 @@ const menu = document.querySelector("nav ul");
 
 if (botao && menu) {
     botao.addEventListener("click", () => {
-        menu.classList.toggle("open");
+        const aberto = menu.classList.toggle("open");
+        botao.setAttribute("aria-expanded", aberto);
     });
 }
 
 const botaoTema = document.querySelector("#temaBotao");
 const temaIcone = document.querySelector("#temaIcone");
 
+if (localStorage.getItem("tema") === "dark") {
+    document.body.classList.add("dark");
+}
+
 if (botaoTema && temaIcone) {
+    temaIcone.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+
     botaoTema.addEventListener("click", (event) => {
         event.preventDefault();
 
-        document.body.classList.toggle("dark");
-
-        temaIcone.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+        const escuro = document.body.classList.toggle("dark");
+        temaIcone.textContent = escuro ? "☀️" : "🌙";
+        localStorage.setItem("tema", escuro ? "dark" : "claro");
     });
 }
 
@@ -77,10 +84,8 @@ function obterCondicaoClimatica(codigo, iconeApi) {
 }
 
 async function clima() {
-    //https://home.openweathermap.org/api_keys  
     const API_KEY = "6fd1ae5b6c00edaa2b773af0a2251cc1";
     const cidade = "Sao Paulo,BR";
- 
 
     const temperaturaAtual = document.querySelector("#temperaturaAtual");
     const descricaoClima = document.querySelector("#descricaoClima");
@@ -129,7 +134,6 @@ async function clima() {
 
         const hoje = formatador.format(new Date());
 
-        // Máxima e mínima de hoje: clima atual + previsões que ainda restam no dia
         const itensDeHoje = dadosPrevisao.list.filter(
             (item) => formatador.format(new Date(item.dt * 1000)) === hoje
         );
@@ -368,5 +372,10 @@ async function empresas() {
     }
 }
 
-clima();
-empresas();
+if (document.querySelector("#temperaturaAtual")) {
+    clima();
+}
+
+if (document.querySelector("#empresa1")) {
+    empresas();
+}

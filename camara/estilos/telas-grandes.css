@@ -18,6 +18,7 @@
     --cor-fundo-cabecalho: #f2f2f2;
     --cor-linha: #f2f2f2;
     --cor-destaque-escuro: #8ab4f8; /* azul claro para fundos escuros */
+    --cor-selecionado: #0756a815;   /* fundo da opção de nível marcada */
 }
 
 * {
@@ -29,9 +30,15 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--cor-texto);
     background-color: var(--cor-fundo);
+      display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh; 
 }
 
 main {
+    flex: 1;            
+    width: 100%;        
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -131,6 +138,7 @@ body.dark {
     --cor-titulo: #ffffff;
     --cor-fundo-cabecalho: #252525;
     --cor-linha: #333333;
+    --cor-selecionado: #8ab4f826;
 }
 
 /* ===== Página inicial ===== */
@@ -419,6 +427,7 @@ footer {
     min-height: 300px;
     background-color: var(--preto);
     color: var(--branco);
+   
 }
 
 #ajusteRodape {
@@ -461,4 +470,301 @@ footer {
 
 .creditos {
     margin-bottom: 0;
+}
+
+/* ===== Associar-se ===== */
+
+/* Layout: formulário à esquerda, cards à direita */
+#ajusteAssociacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+#ajusteAssociacao section {
+    flex: 1;
+}
+
+/* Títulos das duas colunas alinhados */
+#ajusteAssociacao h1,
+#ajusteAssociacao h2 {
+    margin: 20px 0 0;
+    font-size: 1.5em;
+    color: var(--cor-titulo);
+}
+
+/* Caixa do formulário (só o fieldset principal) */
+form > fieldset {
+    margin: 20px 0 0;
+    padding: 20px;
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--sombra-forte);
+}
+
+form > fieldset legend {
+    padding: 0 5px;
+    font-weight: 700;
+    color: var(--cor-titulo);
+}
+
+/* Rótulos dos campos de texto */
+form > fieldset > label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+/* Campos */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    padding: 10px 12px;
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--cor-texto);
+    opacity: 0.8; /* 0.6 reprovava no contraste AA */
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--cor-link);
+    box-shadow: 0 0 0 3px var(--cor-selecionado);
+}
+
+/* Níveis de associação (radios em formato de pílula) */
+.radioAjuste {
+    min-width: 0;
+    margin: 12px 0 4px;
+    padding: 0;
+    border: none;
+}
+
+/* "Nível de associação" com o mesmo visual dos outros rótulos */
+.radioAjuste legend {
+    margin-bottom: 6px;
+    padding: 0;
+    font-weight: 400;
+    color: var(--cor-texto);
+}
+
+.radioAjuste label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 8px 8px 0;
+    padding: 6px 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.radioAjuste label:hover {
+    border-color: var(--cor-link);
+}
+
+.radioAjuste label:has(input:checked) {
+    border-color: var(--cor-link);
+    background-color: var(--cor-selecionado);
+    font-weight: 700;
+}
+
+.radioAjuste input {
+    margin: 0;
+    accent-color: var(--cor-link);
+}
+
+/* Botão de envio */
+#botaoInscreverSe {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 24px;
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda-botao);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+#botaoInscreverSe:hover {
+    transform: scale(1.1);
+    background-color: #2dfc2d;
+    color: var(--preto);
+}
+
+/* Cards dos níveis */
+.cartoes {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 20px;
+}
+
+.cartoes h2 {
+    grid-column: 1 / -1;
+}
+
+.card {
+    padding: 15px;
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--sombra-forte);
+    animation: aparece 0.9s ease both; /* animação ao carregar a página */
+}
+
+/* os cards aparecem um depois do outro */
+.card:nth-of-type(2) { animation-delay: 0.15s; }
+.card:nth-of-type(3) { animation-delay: 0.3s; }
+.card:nth-of-type(4) { animation-delay: 0.45s; }
+
+.card h3 {
+    margin-top: 0;
+    color: var(--cor-titulo);
+}
+
+@keyframes aparece {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botão "Analisar" dos cards */
+.analisar {
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--cor-link);
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.analisar:hover {
+    color: var(--cor-hover);
+    text-decoration: underline;
+}
+
+/* Modais */
+dialog {
+    position: fixed;
+    width: 90%;
+    max-width: 450px;
+    padding: 25px;
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+dialog h2 {
+    margin-top: 0;
+    color: var(--cor-titulo);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Botão "x" no canto do modal */
+.botaoFechar {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    background: none;
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+    border-radius: 50%;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botaoFechar:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--branco);
+}
+
+/* ===== Agradecimento ===== */
+
+#mainAgradecimento {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    
+   padding-bottom: 30px;
+    
+}
+
+#agradecimento {
+    
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--sombra-forte);
+    animation: aparece 0.9s ease both;
+}
+
+#agradecimento h1 {
+    margin: 0 0 5px;
+    color: var(--cor-titulo);
+    text-align: center;
+}
+
+#agradecimento h2 {
+    margin: 0 0 20px;
+    color: var(--cor-titulo);
+    text-align: center;
+    font-size: 20px;
+}
+
+#agradecimento p {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    overflow-wrap: anywhere;
+}
+
+#agradecimento p:last-child {
+    border-bottom: none;
 }

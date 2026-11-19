@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conecta São Paulo Câmara de Comércio | Associação</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Associe-se ao Conecta São Paulo e escolha o nível de associação ideal para a sua empresa ou organização.">
+    <meta name="author" content="Luiz Alex Umbelino">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Conecta São Paulo Câmara de Comércio | Associação">
+    <meta property="og:description" content="Faça parte da rede de negócios do Conecta São Paulo. Conheça os níveis de associação e inscreva-se.">
+    <meta property="og:image" content="https://alex-umbelino.github.io/wdd231/camara/imagens/logo.webp">
+    <meta property="og:url" content="https://alex-umbelino.github.io/wdd231/camara/associacao.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Google Fonts (só os pesos usados: 400 e 700) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/logo.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css" media="screen and (max-width: 640px)">
+
+    <!-- JavaScript -->
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/associacaoEagradecimento.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="identidade">
+            <img src="imagens/logo.webp" alt="Logotipo Conecta São Paulo" width="70" height="70">
+
+            <div class="titulo">
+                <p class="nome-site">Conecta São Paulo</p>
+                <p>Câmara de Comércio</p>
+            </div>
+        </div>
+
+        <nav aria-label="Menu principal">
+            <button id="menu-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-lista">☰</button>
+
+            <ul id="menu-lista">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li><a href="associacao.html" aria-current="page">Associar-se</a></li>
+                <li><a href="#">Descobrir</a></li>
+                <li><button id="temaBotao" aria-label="Alternar tema escuro"><span id="temaIcone">🌙</span></button></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main id="ajusteAssociacao">
+
+        <section>
+
+            <form method="get" action="agradecimento.html">
+                <h1>Formulário de inscrição</h1>
+
+                <fieldset class="niveis">
+                    <legend>Dados da inscrição</legend>
+
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" title="Digite seu primeiro nome" autocomplete="given-name" required>
+
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome" title="Digite seu sobrenome" autocomplete="family-name" required>
+
+                    <label for="cargo">Cargo na organização</label>
+                    <input type="text" id="cargo" name="cargo" placeholder="Ex.: Gerente" title="Apenas letras, hifens e espaços, com no mínimo 7 caracteres" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\- ]{7,}">
+
+                    <label for="email">Endereço de e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@dominio.com.br" title="Digite seu e-mail" autocomplete="email" required>
+
+                    <label for="numCelular">Número de celular</label>
+                    <input type="tel" id="numCelular" name="numCelular" placeholder="(11) 99999-9999" title="Digite seu número de celular" autocomplete="tel" required>
+
+                    <label for="nomeOrg">Nome da empresa/organização</label>
+                    <input type="text" id="nomeOrg" name="nomeOrg" placeholder="Nome da empresa" title="Digite o nome da empresa" autocomplete="organization" required>
+
+                    <fieldset class="radioAjuste">
+                        <legend>Nível de associação</legend>
+                        <label><input type="radio" name="associacao" value="NP" title="Associação NP" required> NP</label>
+                        <label><input type="radio" name="associacao" value="Bronze" title="Associação Bronze"> Bronze</label>
+                        <label><input type="radio" name="associacao" value="Prata" title="Associação Prata"> Prata</label>
+                        <label><input type="radio" name="associacao" value="Ouro" title="Associação Ouro"> Ouro</label>
+                    </fieldset>
+
+                    <label for="descricao">Descrição da empresa</label>
+                    <textarea id="descricao" name="descricao" placeholder="Descreva sua empresa" title="Descreva a atividade da sua empresa"></textarea>
+
+                    <input type="hidden" name="uploadHora" id="uploadHora">
+
+                    <button id="botaoInscreverSe" type="submit">Inscreva-se</button>
+                </fieldset>
+
+            </form>
+
+        </section>
+
+        <aside class="cartoes">
+            <h2>Níveis de associação</h2>
+
+            <div class="card">
+                <h3>Associação NP</h3>
+                <p>Nível de associação sem fins lucrativos</p>
+                <button class="analisar" data-modal="modal-np">Analisar</button>
+            </div>
+
+            <div class="card">
+                <h3>Associação Bronze</h3>
+                <p>Nível de associação Bronze</p>
+                <p>Mensalidade: R$50,00</p>
+                <button class="analisar" data-modal="modal-bronze">Analisar</button>
+            </div>
+
+            <div class="card">
+                <h3>Associação Prata</h3>
+                <p>Nível de associação Prata</p>
+                <p>Mensalidade: R$120,00</p>
+                <button class="analisar" data-modal="modal-prata">Analisar</button>
+            </div>
+
+            <div class="card">
+                <h3>Associação Ouro</h3>
+                <p>Nível de associação Ouro</p>
+                <p>Mensalidade: R$250,00</p>
+                <button class="analisar" data-modal="modal-ouro">Analisar</button>
+            </div>
+        </aside>
+
+        <dialog id="modal-np">
+            <button class="fecharModal botaoFechar" aria-label="Fechar">x</button>
+            <h2>Associação NP</h2>
+            <p>Gratuita para organizações sem fins lucrativos.</p>
+            <ul>
+                <li>Isenção de mensalidade</li>
+                <li>Acesso a eventos básicos</li>
+                <li>Participação na comunidade</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-bronze">
+            <button class="fecharModal botaoFechar" aria-label="Fechar">x</button>
+            <h2>Associação Bronze</h2>
+            <p>Mensalidade: R$50,00</p>
+            <ul>
+                <li>Todos os benefícios NP</li>
+                <li>Listagem no diretório de empresas</li>
+                <li>10% de desconto em eventos</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-prata">
+            <button class="fecharModal botaoFechar" aria-label="Fechar">x</button>
+            <h2>Associação Prata</h2>
+            <p>Mensalidade: R$120,00</p>
+            <ul>
+                <li>Todos os benefícios Bronze</li>
+                <li>Treinamentos mensais</li>
+                <li>25% de desconto em eventos</li>
+                <li>Chance de destaque na página inicial</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-ouro">
+            <button class="fecharModal botaoFechar" aria-label="Fechar">x</button>
+            <h2>Associação Ouro</h2>
+            <p>Mensalidade: R$250,00</p>
+            <ul>
+                <li>Todos os benefícios Prata</li>
+                <li>Destaque garantido na página inicial</li>
+                <li>Eventos exclusivos para membros Ouro</li>
+                <li>50% de desconto em eventos</li>
+                <li>Publicidade nas redes da câmara</li>
+            </ul>
+        </dialog>
+
+    </main>
+
+    <footer>
+
+        <div id="ajusteRodape">
+
+            <div class="rodape">
+                <h2>Conecta-SP Câmara de Comércio</h2>
+                <p>R centroSP <br> Itaim Bibi, pinheiros,123 <br> chama.sp@conectasp.com.br <br> (11)99999-9999</p>
+            </div>
+
+            <div class="rodape">
+                <h2 class="tituloSociais">Mídias Sociais</h2>
+
+                <div class="sociais">
+                    <div><a href="https://br.linkedin.com/in/alex-umbelino-1760ba261" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Alex Umbelino">in</a></div>
+                    <div><a href="https://github.com/Alex-Umbelino/wdd231" target="_blank" rel="noopener noreferrer" aria-label="GitHub do projeto">GIT</a></div>
+                    <div><a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X, antigo Twitter">X</a></div>
+                </div>
+            </div>
+
+            <div class="rodape">
+                <h2>Projeto de aula WDD231</h2>
+                <p class="creditos">Luiz Alex Umbelino <br> &copy; Conecta São Paulo Câmara de Comércio</p>
+                <p id="ultimaMod"></p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
