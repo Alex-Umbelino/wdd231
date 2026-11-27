@@ -1,0 +1,639 @@
+/* GERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5ece3;
+    background-image:
+        linear-gradient(to right, transparent 25vh, #f5ece3 56vh),
+        url("../Imagens/capitaoClaro.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100vh, auto 100vh;
+    background-position: left top, left top;
+    background-attachment: fixed;
+}
+
+
+/* TOPO */
+
+.topo {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+}
+
+.aTopo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: white;
+}
+
+.topo ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.topo a {
+    text-decoration: none;
+    color: #66aaff;
+    font-size: 1.3rem;
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.topo li a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.aTopo a[aria-current="page"] {
+    color: white;
+    font-weight: bold;
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+}
+
+.imgLogo {
+    height: 80px;
+    width: auto;
+}
+
+.btnMenu {
+    display: none;
+}
+
+
+/* PÁGINA INICIAL */
+
+.paginaInicio .conteinerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 12px;
+}
+
+.paginaInicio section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.paginaInicio section div {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.paginaInicio section img {
+    height: 300px;
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.paginaInicio section img:hover {
+    transform: scale(1.05);
+}
+
+.paginaInicio section h2 {
+    background-color: black;
+    border-radius: 12px;
+    padding: 10px;
+    color: white;
+    margin: 20px 35px;
+}
+
+.paginaInicio section p {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 80%;
+    margin: 15px auto;
+}
+
+
+/* PÁGINA BUSCAR JOGOS */
+
+.paginaBuscarJogos .conteinerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.paginaBuscarJogos #listaGames {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.paginaBuscarJogos .cardJogo {
+    background-color: rgba(255, 255, 255, 0.90);
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.paginaBuscarJogos .cardJogo:hover,
+.paginaBuscarJogos .cardJogo:focus-visible {
+    transform: translateY(-5px);
+}
+
+.paginaBuscarJogos .cardJogo:focus-visible {
+    outline: 3px solid #2478d4;
+}
+
+.paginaBuscarJogos .cardJogo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.paginaBuscarJogos .cardJogo h2 {
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+.paginaBuscarJogos .cardJogo p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 10px 0;
+}
+
+
+/* MODAL */
+
+#dialogJogo {
+    width: 85%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: none;
+    border-radius: 18px;
+    padding: 25px;
+    scrollbar-gutter: stable;
+    clip-path: inset(0 round 18px);
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#dialogJogo::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#dialogJogo h2 {
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    padding: 7px;
+}
+
+#conteudoDialog img {
+    display: block;
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    margin: 15px auto;
+}
+
+#fecharDialog {
+    float: right;
+    padding: 4px 12px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+/* FORMULÁRIO */
+
+.formularioBusca {
+    max-width: 650px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #1c1c1c;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.formularioBusca h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.formularioBusca > p {
+    text-align: center;
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+.niveis {
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.niveis legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #66aaff;
+}
+
+.niveis label {
+    display: block;
+    margin: 18px 0 7px;
+    font-weight: bold;
+}
+
+.niveis input,
+.niveis select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #292929;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.niveis input:focus,
+.niveis select:focus {
+    border-color: #66aaff;
+    box-shadow: 0 0 0 2px rgba(102, 170, 255, 0.2);
+}
+
+#botaobuscar {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2478d4;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#botaobuscar:hover {
+    background-color: #145da9;
+    transform: translateY(-2px);
+}
+
+#botaobuscar:active {
+    transform: translateY(0);
+}
+
+
+/* RESULTADO */
+
+.resultadoPesquisa {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #1c1c1c;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+.resultadoPesquisa h1 {
+    margin-bottom: 15px;
+}
+
+.resultadoPesquisa h2 {
+    margin: 25px 0;
+    color: #66aaff;
+}
+
+.saudacao {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.dadosBusca {
+    list-style: none;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.dadosBusca a {
+    color: #66aaff;
+}
+
+.cardResultado {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    text-align: left;
+    background-color: #292929;
+}
+
+.cardResultado h3 {
+    text-align: center;
+}
+
+.cardResultado img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 8px;
+}
+
+.avisoEmail {
+    margin: 25px 0;
+    padding: 15px;
+    background-color: #e8f0ff;
+    color: #222;
+    border-radius: 8px;
+}
+
+.botoesResultado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 13px 25px;
+    border: 2px solid #2478d4;
+    border-radius: 8px;
+    background-color: #2478d4;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao:hover,
+.botao:focus-visible {
+    background-color: #145da9;
+    transform: translateY(-2px);
+}
+
+.botaoSecundario {
+    background-color: transparent;
+    color: #66aaff;
+}
+
+.botaoSecundario:hover,
+.botaoSecundario:focus-visible {
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 30px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.footerPai {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ajusteFooter {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ajusteFooter ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+}
+
+.ajusteFooter a {
+    display: inline-block;
+    text-decoration: none;
+    color: #66aaff;
+    font-size: 1.2rem;
+    transition: transform 0.4s ease;
+}
+
+.ajusteFooter a:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+.ajusteFooter iframe {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    padding-bottom: 10px;
+    aspect-ratio: 16 / 9;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .paginaBuscarJogos #listaGames {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .paginaBuscarJogos #listaGames {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 8px 16px;
+    }
+
+    .imgLogo {
+        height: 55px;
+    }
+
+    .container > a.aTopo span {
+        display: none;
+    }
+
+    .btnMenu {
+        display: block;
+        background: none;
+        border: 2px solid white;
+        border-radius: 6px;
+        color: white;
+        font-size: 1.8rem;
+        line-height: 1;
+        padding: 4px 12px;
+        cursor: pointer;
+    }
+
+    .topo ul.menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .topo ul.menu.aberto {
+        max-height: 300px;
+    }
+
+    .topo ul.menu li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #333;
+    }
+
+    .topo ul.menu a {
+        display: block;
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+
+    .topo ul.menu a[aria-current="page"] {
+        border-bottom: none;
+        background-color: #222;
+    }
+
+    .paginaInicio h1 {
+        font-size: clamp(1.5rem, 7vw, 2.2rem);
+    }
+
+    .paginaInicio section h2 {
+        margin: 15px 12px;
+        font-size: 1.3rem;
+    }
+
+    .paginaInicio section img {
+        width: 90%;
+        height: 200px;
+    }
+
+    .paginaInicio section p {
+        max-width: 90%;
+    }
+
+    footer {
+        padding: 20px 12px;
+    }
+
+    #dialogJogo {
+        width: 95%;
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .formularioBusca {
+        width: 88%;
+        padding: 20px;
+        margin: 25px auto;
+    }
+
+    .niveis {
+        padding: 15px;
+    }
+
+    .resultadoPesquisa {
+        width: 92%;
+        padding: 18px;
+        margin: 25px auto;
+    }
+
+    .cardResultado {
+        padding: 12px;
+    }
+
+    .botao {
+        width: 100%;
+        text-align: center;
+    }
+}

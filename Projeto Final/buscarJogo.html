@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Biblioteca com 15 jogos populares: veja gênero, plataformas e a história de cada um no Alex Games.">
+    <meta name="author" content="Luiz Alex Umbelino">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Biblioteca de jogos | Alex Games">
+    <meta property="og:description" content="Conheça 15 jogos populares, com gênero, plataformas e história de cada um.">
+    <meta property="og:image" content="https://alex-umbelino.github.io/Projeto-Final/Imagens/logoGames.png">
+    <meta property="og:url" content="https://alex-umbelino.github.io/Projeto-Final/buscarJogo.html">
+    <link rel="icon" href="Imagens/logoGames.png" type="image/png">
+    <title>Biblioteca de jogos | Alex Games</title>
+    <link rel="stylesheet" href="css/stylle.css">
+    <script src="JS/script.js" type="module"></script>
+</head>
+
+<body class="paginaBuscarJogos">
+
+    <header class="topo">
+        <nav class="container">
+            <a class="aTopo" href="index.html">
+                <img class="imgLogo" src="Imagens/logoGames.png" alt="Logo Alex Games" width="80" height="80">
+                <span>Alex Games</span>
+            </a>
+
+            <button class="btnMenu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+            <ul class="aTopo menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="buscarJogo.html" aria-current="page">Buscar jogos</a></li>
+                <li><a href="cadastro.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteinerSection">
+
+        <h1>Lista de games</h1>
+        <p>Clique em um jogo para ver a história completa.</p>
+
+        <section id="listaGames"></section>
+
+    </main>
+
+    <dialog id="dialogJogo" aria-labelledby="tituloDialog">
+        <button id="fecharDialog" type="button" aria-label="Fechar detalhes">✕</button>
+        <div id="conteudoDialog"></div>
+    </dialog>
+
+    <footer>
+        <div class="footerPai">
+
+            <div class="ajusteFooter">
+                <a href="index.html">
+                    <img class="imgLogo" src="Imagens/logoGames.png" alt="Logo Alex Games" width="80" height="80" loading="lazy">
+                </a>
+                <h2>Alex Games</h2>
+            </div>
+
+            <div class="ajusteFooter">
+                <h2>Acesse as plataformas</h2>
+                <ul>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://store.playstation.com/pt-br/">PlayStation</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.xbox.com/pt-br">Xbox</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.nintendo.com/pt-br">Nintendo</a></li>
+                </ul>
+            </div>
+
+            <div class="ajusteFooter">
+                <h2>Sobre o projeto</h2>
+                <ul>
+                    <!-- TROQUE pelo link do seu vídeo de demonstração -->
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://youtu.be/SEU-VIDEO">Vídeo de demonstração</a></li>
+                    <li><a href="atribuicoes.html">Atribuições</a></li>
+                </ul>
+            </div>
+
+            <div class="ajusteFooter">
+                <h2>Nossa indicação da semana</h2>
+                <iframe src="https://www.youtube-nocookie.com/embed/yF29baX-IsA" title="Vídeo de indicação de jogo" loading="lazy" allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+        <p>&copy; 2026 Alex Games. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conte suas preferências de plataforma e gênero e receba recomendações de jogos personalizadas no Alex Games.">
+    <meta name="author" content="Luiz Alex Umbelino">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Encontre seu próximo jogo | Alex Games">
+    <meta property="og:description" content="Escolha sua plataforma e seu gênero favoritos e descubra jogos recomendados para você.">
+    <meta property="og:image" content="https://alex-umbelino.github.io/Projeto-Final/Imagens/logoGames.png">
+    <meta property="og:url" content="https://alex-umbelino.github.io/Projeto-Final/cadastro.html">
+    <link rel="icon" href="Imagens/logoGames.png" type="image/png">
+    <title>Encontre seu jogo | Alex Games</title>
+    <link rel="stylesheet" href="css/stylle.css">
+    <script src="JS/script.js" type="module"></script>
+</head>
+
+<body>
+
+    <header class="topo">
+        <nav class="container">
+            <a class="aTopo" href="index.html">
+                <img class="imgLogo" src="Imagens/logoGames.png" alt="Logo Alex Games" width="80" height="80">
+                <span>Alex Games</span>
+            </a>
+
+            <button class="btnMenu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+            <ul class="aTopo menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="buscarJogo.html">Buscar jogos</a></li>
+                <li><a href="cadastro.html" aria-current="page">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formularioBusca">
+
+            <h1>Encontre jogos para você!</h1>
+            <p>Conte um pouco sobre suas preferências.</p>
+
+            <!-- Mensagem exibida pelo JS quando há uma busca salva no localStorage -->
+            <p id="mensagemRetorno" class="avisoEmail" hidden></p>
+
+            <form id="formInscricao" action="resultado.html" method="get">
+
+                <fieldset class="niveis">
+                    <legend>Dados da busca</legend>
+
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="given-name" required>
+
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome" autocomplete="family-name" required>
+
+                    <label for="plataforma">Console ou plataforma principal</label>
+                    <select id="plataforma" name="plataforma" required>
+                        <option value="" disabled selected>Selecione uma plataforma</option>
+                        <option value="PC">PC</option>
+                        <option value="PlayStation">PlayStation</option>
+                        <option value="Xbox">Xbox</option>
+                        <option value="Nintendo Switch">Nintendo Switch</option>
+                    </select>
+
+                    <label for="email">Endereço de e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@dominio.com.br" autocomplete="email" required>
+
+                    <label for="genero">Gênero de jogos de interesse</label>
+                    <select id="genero" name="genero" required>
+                        <option value="" disabled selected>Selecione um gênero</option>
+                        <option value="Ação">Ação (todos)</option>
+                        <option value="Ação e aventura">Ação e aventura</option>
+                        <option value="Ação e sobrevivência">Ação e sobrevivência</option>
+                        <option value="Ação e mundo aberto">Ação e mundo aberto</option>
+                        <option value="RPG e ação">RPG e ação</option>
+                        <option value="RPG e fantasia">RPG e fantasia</option>
+                        <option value="Tiro em primeira pessoa">Tiro em primeira pessoa</option>
+                        <option value="Battle Royale">Battle Royale</option>
+                        <option value="Luta">Luta</option>
+                        <option value="Terror e sobrevivência">Terror e sobrevivência</option>
+                    </select>
+
+                    <button id="botaobuscar" type="submit">Buscar jogos</button>
+                </fieldset>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footerPai">
+
+            <div class="ajusteFooter">
+                <a href="index.html">
+                    <img class="imgLogo" src="Imagens/logoGames.png" alt="Logo Alex Games" width="80" height="80" loading="lazy">
+                </a>
+                <h2>Alex Games</h2>
+            </div>
+
+            <div class="ajusteFooter">
+                <h2>Acesse as plataformas</h2>
+                <ul>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://store.playstation.com/pt-br/">PlayStation</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.xbox.com/pt-br">Xbox</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.nintendo.com/pt-br">Nintendo</a></li>
+                </ul>
+            </div>
+
+            <div class="ajusteFooter">
+                <h2>Sobre o projeto</h2>
+                <ul>
+                    <!-- TROQUE pelo link do seu vídeo de demonstração -->
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://youtu.be/SEU-VIDEO">Vídeo de demonstração</a></li>
+                    <li><a href="atribuicoes.html">Atribuições</a></li>
+                </ul>
+            </div>
+
+            <div class="ajusteFooter">
+                <h2>Nossa indicação da semana</h2>
+               <iframe src="https://www.youtube-nocookie.com/embed/yF29baX-IsA" title="Vídeo de indicação de jogo" loading="lazy" allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+        <p>&copy; 2026 Alex Games. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+{
+  "titulo": "Biblioteca de jogos Alex Games",
+  "descricao": "Jogos conhecidos e populares de indicação para ótimas gameplays",
+  "jogos": [
+    {
+      "id": 1,
+      "nome": "The Last of Us Part I",
+      "plataforma": "PlayStation 5, PC",
+      "genero": "Ação e sobrevivência",
+      "descricao": "Uma jornada emocionante em um mundo devastado por uma infecção, acompanhando Joel e Ellie.",
+      "biografia": "Em um mundo devastado por uma infecção que transformou grande parte da humanidade em criaturas perigosas, a sobrevivência se tornou uma luta diária. Joel, um homem marcado por perdas e tragédias, recebe a missão de escoltar Ellie, uma jovem que pode carregar a esperança de um futuro melhor. Durante a jornada, os dois atravessam cidades abandonadas, enfrentam grupos hostis e descobrem que os maiores perigos nem sempre são os infectados. Uma história intensa sobre confiança, sacrifício, humanidade e os laços que podem surgir mesmo nos momentos mais sombrios.",
+      "imagem": "Imagens/the-last-of-us.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "God of War Ragnarök",
+      "plataforma": "PlayStation 4, PlayStation 5, PC",
+      "genero": "Ação e aventura",
+      "descricao": "Kratos e Atreus enfrentam os desafios do Ragnarök em uma aventura pela mitologia nórdica.",
+      "biografia": "Após os acontecimentos de God of War (2018), Kratos e seu filho Atreus precisam enfrentar as consequências de suas escolhas em um mundo ameaçado pelo Ragnarök, o lendário fim dos tempos da mitologia nórdica. Enquanto Atreus busca compreender sua verdadeira identidade e seu papel nas profecias, Kratos tenta protegê-lo dos perigos que se aproximam. A aventura leva os personagens por diferentes reinos, onde encontram deuses, criaturas mitológicas e inimigos poderosos. Uma jornada emocionante sobre paternidade, destino, amadurecimento e a difícil tarefa de romper ciclos de violência.",
+      "imagem": "Imagens/god-of-war.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Assassin's Creed Valhalla",
+      "plataforma": "PlayStation, Xbox, PC",
+      "genero": "RPG e ação",
+      "descricao": "Explore a era dos vikings, conquiste territórios e construa seu próprio assentamento.",
+      "biografia": "Ambientado durante a expansão viking pela Inglaterra do século IX, Assassin's Creed Valhalla coloca o jogador no controle de Eivor, um guerreiro ou guerreira nórdica em busca de um novo lar para seu povo. Em uma época marcada por conflitos entre reinos, alianças políticas e disputas territoriais, será necessário liderar ataques, conquistar fortalezas e construir um assentamento para fortalecer seu clã. A aventura combina exploração em mundo aberto, combates intensos e elementos da cultura e mitologia nórdica, oferecendo liberdade para moldar o caminho de Eivor e influenciar o destino de seu povo.",
+      "imagem": "Imagens/ac-valhalla.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Rise of the Tomb Raider",
+      "plataforma": "PlayStation, Xbox, PC",
+      "genero": "Ação e aventura",
+      "descricao": "Acompanhe Lara Croft em uma expedição perigosa em busca de uma cidade lendária.",
+      "biografia": "Lara Croft parte em uma expedição pelas regiões geladas da Sibéria em busca de Kitezh, uma cidade lendária que, segundo antigas histórias, guarda o segredo da imortalidade. Porém, uma organização misteriosa chamada Trinity também está atrás desse conhecimento e fará de tudo para impedir Lara. Em meio a montanhas perigosas, cavernas esquecidas e tumbas ancestrais, a protagonista precisa sobreviver às condições extremas, resolver enigmas e enfrentar inimigos determinados. Uma aventura que mistura exploração, arqueologia, sobrevivência e descobertas que colocam à prova a coragem de Lara.",
+      "imagem": "Imagens/tomb-raider.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "Hogwarts Legacy",
+      "plataforma": "PlayStation, Xbox, Nintendo Switch, PC",
+      "genero": "RPG e fantasia",
+      "descricao": "Viva sua própria história no universo de Harry Potter, estudando magia e explorando Hogwarts.",
+      "biografia": "Ambientado no universo mágico de Harry Potter, décadas antes das aventuras conhecidas da franquia, Hogwarts Legacy permite que o jogador viva sua própria jornada como estudante da famosa escola de magia. Com a habilidade de acessar uma magia antiga e misteriosa, o protagonista descobre que está envolvido em um segredo capaz de ameaçar todo o mundo bruxo. Durante a aventura, será possível frequentar aulas, aprender feitiços, preparar poções, explorar a Floresta Proibida e descobrir lugares fascinantes. Uma experiência de RPG que dá liberdade para construir sua identidade como bruxo e escolher o caminho que deseja seguir.",
+      "imagem": "Imagens/hogwarts-legacy.jpg"
+    },
+    {
+      "id": 6,
+      "nome": "Call of Duty: Modern Warfare III",
+      "plataforma": "PlayStation, Xbox, PC",
+      "genero": "Tiro em primeira pessoa",
+      "descricao": "Participe de operações militares intensas em uma campanha repleta de ação.",
+      "biografia": "A história acompanha o capitão John Price e a lendária Força-Tarefa 141 em uma nova ameaça internacional. O grupo precisa enfrentar Vladimir Makarov, um inimigo perigoso que pretende ampliar sua influência por meio de operações militares e ataques estratégicos. Com missões espalhadas por diferentes regiões, o jogador participa de confrontos intensos, operações secretas e situações que exigem decisões rápidas. Além da campanha, o título oferece modos multiplayer competitivos e experiências cooperativas, mantendo a ação característica da franquia Call of Duty.",
+      "imagem": "Imagens/cod-mw3.jpg"
+    },
+    {
+      "id": 7,
+      "nome": "Grand Theft Auto VI",
+      "plataforma": "PlayStation 5, Xbox Series X/S",
+      "genero": "Ação e mundo aberto",
+      "descricao": "Explore o estado de Leonida em uma nova aventura de mundo aberto da franquia GTA.",
+      "biografia": "Grand Theft Auto VI apresenta uma nova história ambientada em Leonida, uma região inspirada na Flórida e marcada por cidades vibrantes, praias, áreas rurais e ambientes cheios de contrastes. A trama acompanha Lucia e Jason, dois personagens envolvidos em uma jornada de crimes, ambições e decisões que podem mudar suas vidas. Em um mundo aberto repleto de possibilidades, o jogador poderá explorar diferentes regiões, conhecer personagens peculiares e participar de situações imprevisíveis. O jogo promete levar a experiência característica da franquia GTA a uma nova dimensão, com liberdade de exploração e uma narrativa centrada em seus protagonistas.",
+      "imagem": "Imagens/gta-6.jpg"
+    },
+    {
+      "id": 8,
+      "nome": "Combat Arms",
+      "plataforma": "PC",
+      "genero": "Tiro em primeira pessoa",
+      "descricao": "Um jogo de combate multiplayer com diferentes mapas, armas e modos de batalha.",
+      "biografia": "Combat Arms é um jogo de tiro em primeira pessoa focado em partidas multiplayer, colocando jogadores em confrontos militares rápidos e competitivos. Com uma variedade de mapas, equipamentos e armas, o título oferece diferentes estilos de combate e modos de jogo. Os participantes precisam desenvolver estratégias, conhecer os cenários e trabalhar em equipe para superar os adversários. Conhecido por sua proposta acessível e partidas dinâmicas, Combat Arms conquistou uma comunidade de jogadores que buscavam desafios online e confrontos intensos no computador.",
+      "imagem": "Imagens/combat-arms.jpg"
+    },
+    {
+      "id": 9,
+      "nome": "Call of Duty: Warzone",
+      "plataforma": "PlayStation, Xbox, PC",
+      "genero": "Battle Royale",
+      "descricao": "Entre em campos de batalha online e enfrente outros jogadores em busca da vitória.",
+      "biografia": "Call of Duty: Warzone leva a experiência de combate da franquia para um ambiente de Battle Royale, onde dezenas de jogadores disputam a sobrevivência em grandes mapas. Os participantes precisam explorar o cenário, encontrar equipamentos, administrar recursos e enfrentar equipes adversárias enquanto a área segura diminui progressivamente. Cada partida apresenta situações imprevisíveis, exigindo estratégia, precisão e trabalho em equipe. Com diferentes equipamentos, operadores e possibilidades de abordagem, Warzone oferece confrontos competitivos em que apenas os jogadores mais preparados conseguem alcançar a vitória.",
+      "imagem": "Imagens/warzone.jpg"
+    },
+    {
+      "id": 10,
+      "nome": "Mortal Kombat 1",
+      "plataforma": "PlayStation 5, Xbox Series X/S, Nintendo Switch, PC",
+      "genero": "Luta",
+      "descricao": "Enfrente adversários em combates brutais com personagens clássicos e novas histórias.",
+      "biografia": "Mortal Kombat 1 apresenta um novo universo criado por Liu Kang, agora um deus do fogo, que busca estabelecer uma realidade diferente para os personagens conhecidos da franquia. Entretanto, forças misteriosas ameaçam esse equilíbrio e colocam novamente os guerreiros em rota de colisão. O jogador acompanha histórias reimaginadas de personagens clássicos, participa de torneios e enfrenta adversários em combates intensos. Com golpes especiais, fatalities marcantes e um sistema de parceiros de combate chamado Kameo Fighters, o jogo renova a experiência da série sem abandonar sua identidade brutal e competitiva.",
+      "imagem": "Imagens/mortal-kombat.jpg"
+    },
+    {
+      "id": 11,
+      "nome": "Dragon Ball Z: Budokai Tenkaichi 3",
+      "plataforma": "PlayStation 2, Wii",
+      "genero": "Luta",
+      "descricao": "Reviva batalhas épicas do universo Dragon Ball com um grande elenco de personagens.",
+      "biografia": "Dragon Ball Z: Budokai Tenkaichi 3 é um dos jogos de luta mais conhecidos entre os fãs da franquia Dragon Ball. O título reúne um enorme elenco de personagens e permite reviver batalhas inspiradas em diferentes sagas do anime, desde os primeiros confrontos de Dragon Ball Z até os acontecimentos de Dragon Ball GT. Os combates acontecem em arenas tridimensionais, com liberdade de movimentação, transformações, ataques especiais e confrontos que reproduzem a intensidade das batalhas da série. Uma experiência nostálgica para quem cresceu acompanhando Goku, Vegeta e seus rivais.",
+      "imagem": "Imagens/dragon-ball.jpg"
+    },
+    {
+      "id": 12,
+      "nome": "Marvel's Spider-Man Remastered",
+      "plataforma": "PlayStation 5, PC",
+      "genero": "Ação e aventura",
+      "descricao": "Assuma o papel de Peter Parker e proteja Nova York utilizando habilidades e poderes do Homem-Aranha.",
+      "biografia": "Nesta aventura, Peter Parker já possui experiência como Homem-Aranha e precisa equilibrar sua vida pessoal com a responsabilidade de proteger Nova York. Quando uma ameaça criminosa coloca a cidade em perigo, ele enfrenta inimigos conhecidos e descobre uma conspiração que pode afetar milhares de pessoas. Entre combates acrobáticos, perseguições e momentos emocionantes, o jogador pode explorar Manhattan utilizando as famosas teias para se locomover entre os prédios. A história apresenta uma visão mais madura do herói, destacando seus desafios, relacionamentos e os sacrifícios necessários para proteger aqueles que ama.",
+      "imagem": "Imagens/spider-man.jpg"
+    },
+    {
+      "id": 13,
+      "nome": "Red Dead Redemption 2",
+      "plataforma": "PlayStation 4, Xbox One, PC",
+      "genero": "Ação e mundo aberto",
+      "descricao": "Explore o Velho Oeste acompanhando Arthur Morgan e sua gangue em uma história emocionante.",
+      "biografia": "Ambientado no final do século XIX, Red Dead Redemption 2 acompanha Arthur Morgan, um fora da lei que faz parte da gangue liderada por Dutch van der Linde. Com o avanço da civilização e a perseguição das autoridades, o grupo enfrenta dificuldades para manter seu estilo de vida e encontrar um lugar seguro. Durante a jornada, Arthur precisa lidar com conflitos internos, lealdade, amizades e as consequências de suas escolhas. Em um mundo aberto extremamente detalhado, o jogador pode explorar cidades, florestas, montanhas e pequenas comunidades, vivendo uma das narrativas mais marcantes do universo dos videogames.",
+      "imagem": "Imagens/red-dead-2.jpg"
+    },
+    {
+      "id": 14,
+      "nome": "Elden Ring",
+      "plataforma": "PlayStation, Xbox, PC",
+      "genero": "RPG e ação",
+      "descricao": "Explore um vasto mundo de fantasia, enfrente criaturas poderosas e descubra seus mistérios.",
+      "biografia": "Em Elden Ring, o jogador assume o papel de um Maculado que retorna às Terras Intermédias, um mundo fantástico marcado por guerras, ruínas e forças sobrenaturais. Após a fragmentação do Anel Prístino, diferentes semideuses passaram a disputar seus fragmentos, mergulhando a região em conflitos e destruição. Cabe ao jogador explorar esse vasto território, enfrentar criaturas aterrorizantes, descobrir segredos antigos e desafiar adversários extremamente poderosos. Com grande liberdade de exploração, personalização de habilidades e múltiplos caminhos, a aventura recompensa a curiosidade, a paciência e a determinação.",
+      "imagem": "Imagens/elden-ring.jpg"
+    },
+    {
+      "id": 15,
+      "nome": "Resident Evil 4 Remake",
+      "plataforma": "PlayStation, Xbox, PC",
+      "genero": "Terror e sobrevivência",
+      "descricao": "Acompanhe Leon Kennedy em uma missão perigosa para resgatar a filha do presidente.",
+      "biografia": "Alguns anos após os acontecimentos de Raccoon City, Leon S. Kennedy recebe uma missão especial: localizar e resgatar Ashley Graham, filha do presidente dos Estados Unidos, desaparecida em uma região rural da Europa. Ao chegar ao local, Leon encontra uma comunidade hostil dominada por uma misteriosa infecção que transforma pessoas em inimigos extremamente perigosos. Cercado por ameaças, ele precisa administrar munição, encontrar recursos, resolver enigmas e enfrentar criaturas aterrorizantes. O remake moderniza a experiência clássica com gráficos impressionantes, combates mais dinâmicos e uma atmosfera intensa de terror e sobrevivência.",
+      "imagem": "Imagens/resident-evil-4.jpg"
+    }
+  ]
+}

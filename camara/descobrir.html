@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Conecta São Paulo Câmara de Comércio| Descobrir</title>
+    <title>Descobrir São Paulo | Conecta São Paulo Câmara de Comércio</title>
 
     <!-- SEO -->
-    <meta name="description" content="Associe-se ao Conecta São Paulo e escolha o nível de associação ideal para a sua empresa ou organização.">
+    <meta name="description" content="Descubra 8 lugares imperdíveis de São Paulo: museus, parques, mercados e pontos culturais recomendados pela Conecta São Paulo Câmara de Comércio.">
     <meta name="author" content="Luiz Alex Umbelino">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Associe-se | Conecta São Paulo Câmara de Comércio">
-    <meta property="og:description" content="Faça parte da rede de negócios do Conecta São Paulo. Conheça os níveis de associação e inscreva-se.">
+    <meta property="og:title" content="Descobrir São Paulo | Conecta São Paulo Câmara de Comércio">
+    <meta property="og:description" content="Museus, parques e pontos culturais para conhecer em São Paulo.">
     <meta property="og:image" content="https://alex-umbelino.github.io/wdd231/camara/imagens/logo.webp">
-    <meta property="og:url" content="https://alex-umbelino.github.io/wdd231/camara/associacao.html">
+    <meta property="og:url" content="https://alex-umbelino.github.io/wdd231/camara/descobrir.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
 
-    <!-- Google Fonts (só os pesos usados: 400 e 700) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
@@ -31,10 +31,11 @@
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-grandes.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css" media="screen and (max-width: 640px)">
+    <link rel="stylesheet" href="estilos/descobrir.css">
 
     <!-- JavaScript -->
     <script src="scripts/index.js" defer></script>
-    <script src="scripts/associacao-agradecimento.js" defer></script>
+    <script src="scripts/descobrir.js" type="module"></script>
 </head>
 
 <body>
@@ -56,7 +57,7 @@
             <ul id="menu-lista">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="diretorio.html">Diretório</a></li>
-                <li><a href="associacao.html" >Associar-se</a></li>
+                <li><a href="associacao.html">Associar-se</a></li>
                 <li><a href="descobrir.html" aria-current="page">Descobrir</a></li>
                 <li><button id="temaBotao" aria-label="Alternar tema escuro"><span id="temaIcone">🌙</span></button></li>
             </ul>
@@ -64,20 +65,28 @@
 
     </header>
 
- <h1>Descubra o Conecta São Paulo</h1>
+    <main class="descobrir">
 
+        <h1>Descubra São Paulo</h1>
 
+        <!-- Mensagem da última visita (localStorage) -->
+        <div id="mensagemVisita" class="mensagem-visita" role="status">
+            <p id="textoVisita"></p>
+            <button id="fecharMensagem" class="botaoFechar" type="button" aria-label="Fechar mensagem">✕</button>
+        </div>
 
-    <main>
+        <p class="introducao">A maior cidade do Brasil tem mais de 11 milhões de habitantes, é o principal centro financeiro do país e oferece cultura, gastronomia e lazer para todos os gostos. Conheça 8 lugares que valem a visita.</p>
 
-        <section>
+        <!-- Cartões gerados pelo JS a partir de data/lugares.mjs -->
+        <section id="cartoes" class="grade-cartoes" aria-label="Lugares para conhecer"></section>
 
-        </section>
+        <!-- Modal do botão Saiba mais -->
+        <dialog id="dialogLugar" aria-labelledby="tituloDialog">
+            <button id="fecharDialog" class="botaoFechar" type="button" aria-label="Fechar detalhes">✕</button>
+            <div id="conteudoDialog"></div>
+        </dialog>
+
     </main>
-
-
-
-
 
     <footer>
 

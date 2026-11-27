@@ -1,0 +1,176 @@
+/* ===== Descobrir ===== */
+
+.descobrir h1 {
+    margin: 20px 0 10px;
+    color: var(--cor-titulo);
+    text-align: center;
+}
+
+.introducao {
+    max-width: 800px;
+    margin: 0 auto 25px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Mensagem da última visita */
+.mensagem-visita {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 15px 60px 15px 18px;
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-left: 6px solid var(--cor-link);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px var(--sombra);
+}
+
+.mensagem-visita[hidden] {
+    display: none;
+}
+
+.mensagem-visita p {
+    margin: 0;
+    font-weight: 700;
+    color: var(--cor-titulo);
+}
+
+/* Grade dos cartões - telas pequenas (320px a 640px) */
+.grade-cartoes {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 30px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "c1"
+        "c2"
+        "c3"
+        "c4"
+        "c5"
+        "c6"
+        "c7"
+        "c8";
+}
+
+.cartao1 { grid-area: c1; }
+.cartao2 { grid-area: c2; }
+.cartao3 { grid-area: c3; }
+.cartao4 { grid-area: c4; }
+.cartao5 { grid-area: c5; }
+.cartao6 { grid-area: c6; }
+.cartao7 { grid-area: c7; }
+.cartao8 { grid-area: c8; }
+
+/* Cartão */
+.cartao {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 18px;
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px var(--sombra);
+}
+
+.cartao h2 {
+    margin: 0 0 15px;
+    padding: 10px;
+    background-color: var(--cor-secundaria);
+    color: var(--branco);
+    text-align: center;
+    font-size: 21px;
+    border-radius: 8px;
+}
+
+.cartao figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cartao img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cartao address {
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--cor-titulo);
+}
+
+.cartao p {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.botao-saiba {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: var(--cor-secundaria);
+    color: var(--branco);
+    border: 1px solid var(--cor-borda-botao);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-saiba:hover,
+.botao-saiba:focus-visible {
+    background-color: var(--cinza-hover);
+}
+
+/* Modal */
+#dialogLugar address {
+    font-style: normal;
+    font-weight: 700;
+}
+
+#dialogLugar a {
+    color: var(--cor-link);
+    font-weight: 700;
+}
+
+#dialogLugar h2 {
+    padding-right: 40px;
+}
+
+/* Telas médias (641px a 1024px) */
+@media screen and (min-width: 641px) {
+    .grade-cartoes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "c1 c1"
+            "c2 c3"
+            "c4 c5"
+            "c6 c7"
+            "c8 c8";
+    }
+
+    /* efeito de imagem só fora do celular */
+    .cartao img {
+        transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .cartao img:hover {
+        transform: scale(1.08);
+        filter: saturate(1.4) brightness(1.05);
+    }
+}
+
+/* Telas grandes (1025px ou mais) */
+@media screen and (min-width: 1025px) {
+    .grade-cartoes {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "c1 c1 c2 c3"
+            "c4 c5 c6 c6"
+            "c7 c7 c8 c8";
+    }
+}
